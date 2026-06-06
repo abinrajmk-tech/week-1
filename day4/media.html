@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+  </head>
+  <body>
+    <header><h1>Audio and video with accessibility</h1></header>
+    <main>
+      <video controls width="640" poster="https://picsum.photos/640/340" src="https://www.w3schools.com/html/mov_bbb.mp4">
+        <p>Unsupported Browser</p>
+        <track kind="captions" srclang="en" src="media.vtt" />
+      </video>
+
+      <details>
+        <summary>W3school video file</summary>
+        <p>this is a public sample video from w3school</p>
+      </details>
+      <br />
+
+      <audio controls>
+        <source
+          src="https://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3"
+          type="audio/mp3"
+        />
+        <source
+          src="https://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.ogg"
+          type="audio/ogg"
+        />
+        Your browser does not support the audio.
+      </audio>
+      <details>
+        <summary>pop audio</summary>
+        <p>This audio is from simploeguics2pygame</p>
+        <p>It have a pop sound</p>
+      </details>
+    </main>
+  </body>
+</html>

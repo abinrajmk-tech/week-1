@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .li-class:nth-child(2n) {
+        color: aquamarine;
+      }
+      input[type="email"] {
+        border: 2px solid black;
+      }
+      .card,
+      .featured {
+        color: red;
+      }
+      /* article > p {
+        color: blue;
+      }
+      article > p ~p{
+        color: green
+      } */
+      article p:first-child {
+        color: green;
+      }
+      article h2 + p {
+        color: blueviolet;
+      }
+      h1:hover {
+        color: aqua;
+      }
+      input:focus{
+        background-color: cyan;
+      }
+      article p:last-child {
+        color: chocolate;
+      }
+      section p:nth-child(3n + 1) {
+        color: rgb(119, 119, 4);
+      }
+
+      .before_after p::before{
+        content: "Before : ";
+
+      }
+      .before_after p::after{
+        content: " : After ";
+      }
+      a[href^="https"]{
+        color: orange;
+      }
+      h2 + p{
+        font-style: italic;
+        font-weight: 900;
+      }
+       
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Css Selector</h1>
+      <div>
+        <ul>
+          <li class="li-class">Lorem ipsum dolor sit amet.</li>
+          <li class="li-class">Lorem ipsum dolor sit amet.</li>
+          <li class="li-class">Lorem ipsum dolor sit amet.</li>
+          <li class="li-class">Lorem ipsum dolor sit amet.</li>
+          <li class="li-class">Lorem ipsum dolor sit amet.</li>
+        </ul>
+      </div>
+      <div>
+        <p><input type="email" id="email" /></p>
+        <label for="email">professional email</label>
+      </div>
+      <div>
+        <p><input type="email" id="email" /></p>
+        <label for="email">personal email</label>
+      </div>
+      <div class="featured">child
+        <p>Featured class</p>
+      </div>
+      <div class="card">
+        <p>card class</p>
+      </div>
+      <article>
+        <p>article paragraph with first child rule</p>
+        <p>article paragraph 2</p>
+        <p>article paragraph 3</p>
+        <p>article paragraph with last child rule</p>
+      </article>
+
+      <h2>Heading 2</h2>
+      <p>Paragraph preceded by h2</p>
+
+      <section>
+        <h2>nth child (3n+1)</h2>
+        <p>Lorem ipsum dolor sit amet.1</p>
+        <p>Lorem ipsum dolor sit amet.2</p>
+        <p>Lorem ipsum dolor sit amet.3</p>
+        <p>Lorem ipsum dolor sit amet.4</p>
+        <p>Lorem ipsum dolor sit amet.1</p>
+        <p>Lorem ipsum dolor sit amet.4</p>
+
+
+      </section>
+      <div class="before_after">
+        <p>Lorem ipsum dolor sit amet.</p>
+     
+      </div>  
+      <p></p><a href="https:a.com">External link</a></p>
+      <a href="#">Internal Link</a>
+
+    </main>
+  </body>
+</html>

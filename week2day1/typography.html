@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald:wght@200..700&display=swap");
+      html {
+        font-size: 62.5%;
+      }
+      h1 {
+        font-size: 6rem;
+      }
+      h2 {
+        font-size: 4.8rem;
+      }
+      h3 {
+        font-size: 3.6rem;
+      }
+      h4 {
+        font-size: 3rem;
+      }
+      h5 {
+        font-size: 2.4rem;
+      }
+      h6 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+      li {
+        font-size: 1.6rem;
+      }
+      .serif {
+        font-family: "Black Ops One", system-ui;
+        font-weight: 400;
+        font-display: swap;
+      }
+      .san-serif {
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        font-display: swap;
+      }
+      div > p {
+        font-family: "Black Ops One", system-ui;
+        font-synthesis: weight;
+      }
+      p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Heading 6 rem</h1>
+      <h2>h2 6.4rem</h2>
+      <h3>h3 3.6rem</h3>
+      <h4>h4 3rem</h4>
+      <h5>h5 2.4rem</h5>
+      <h6>h6 1.8rem</h6>
+
+      <p>Paragraph 1.4 rem</p>
+      <ul>
+        <li>li 1.6 rem</li>
+      </ul>
+
+      <p style="font-size: 1.2rem">Paragraph 1.2</p>
+
+      <h1 class="serif">Heading 1 with font family Black Ops One</h1>
+      <h2 class="san-serif">Heading 2 with font family Oswald</h2>
+
+      <div>
+        <p style="font-weight: 400">font-weight 400</p>
+        <p style="font-weight: 500">font-weight 500 (synthetic)</p>
+        <p style="font-weight: 600">font-weight 600 (synthetic)</p>
+        <p style="font-weight: 700">font-weight 700 (synthetic)</p>
+        <p style="font-weight: 800">font-weight 800 (synthetic)</p>
+      </div>
+
+      <div>
+        <p style="line-height: 1.5; letter-spacing: 0.1rem; word-spacing: 0.5; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo atque
+          esse, fugit eum labore, tenetur, ipsam corrupti reiciendis debitis
+          necessitatibus voluptatum? Consectetur necessitatibus deserunt
+          explicabo facilis assumenda, animi aut quo? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Esse commodi et tempore ipsa modi minus
+          dolore earum quis numquam, provident ut odit molestias quam ex nihil
+          nobis delectus at veniam laboriosam velit accusantium pariatur? Quia
+          et adipisci aliquid voluptas tempora blanditiis ratione dolores
+          placeat, necessitatibus distinctio doloribus odio iure eos
+          perspiciatis nemo molestiae tenetur! Animi aliquid numquam ipsam ex
+          assumenda voluptatem illo hic cumque, veniam quidem fuga possimus
+          optio eius quisquam, eveniet delectus, repudiandae quo? Suscipit natus
+          assumenda repellendus harum vel voluptatibus deserunt cupiditate? Quo
+          voluptas aperiam illo temporibus voluptates omnis, porro facilis
+          necessitatibus praesentium ratione reiciendis consequatur quas earum.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

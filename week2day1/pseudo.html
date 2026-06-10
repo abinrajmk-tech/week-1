@@ -1,0 +1,124 @@
+<!-- 
+​160.​​Create pseudo.html and build a navigation bar using :hover and :focus-visible (not :focus) for​
+    ​interactive states - add a comment explaining the difference​
+​161.​ ​Build a custom styled checkbox: hide the default input[type=checkbox] with appearance: none,​
+    ​recreate a checkmark using ::before on a label that is displayed when :checked​
+​162.​ ​Build a numbered list using CSS counters: counter-reset on the ol, counter-increment on li, and​
+    ​content: counter() in a ::before pseudo-element​
+​163.​ ​Build a pure CSS tooltip: position::after as absolute, toggle it visible with :hover on the parent.​
+    ​The tooltip text comes from a data-tooltip attribute using attr()​ 
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Classes and Elements</title>
+    <style>
+      a:hover {
+        color: rgb(0, 0, 0);
+      }
+      .focus-visible:focus-visible {
+        border: 5px solid rgb(22, 21, 21);
+      }
+      .focus:focus{
+        border: 5px solid rgb(28, 19, 107);
+      }
+      #checkbox-label::before{
+        height: 10px;
+        display: inline-block;
+        width: 10px;
+        border: 1px solid black;
+        border-radius: 2px;
+        margin-right: 10px;
+        content: " ";
+        
+      }
+      input[type="checkbox"]:checked + br +  #checkbox-label::before{
+        
+        content: "*";
+      }
+      .list >  li{
+        counter-increment: list-item 1;
+      }
+      .list > li::before{
+        content: counter(list-item);
+      }
+      .list{
+        counter-reset: list-item 0;
+      }
+      .tooltip{
+        position: relative;
+      }
+      .tooltip::after{
+        content: attr(data-tooltip);
+        visibility: hidden;
+        position: absolute;
+        color: green;
+        opacity: 0;
+        top: 20px;
+        left: 30px;
+        border: 1px solid black;
+        background: #ffff;
+
+        
+      }
+      .tooltip:hover::after{
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>Pseudo Classes and Elements</h1>
+      <nav>
+        <ul>
+        <li>
+          <p><a class="focus-visible" href="#">Home</a></p>
+        </li>
+        <li>
+          <p><a class="focus-visible" href="#">About</a></p>
+        </li>
+        <li>
+          <p><a class="focus" href="#">Contact</a></p>
+        </li>
+        <li>
+          <p><a class="focus" href="#">Service</a></p>
+        </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <h2>focus visible search</h2>
+        <label for="search">search</label>
+        <input type="search" name="search" id="search" />
+      </div>
+      <div>
+        <h2>focus search</h2>
+        <label for="search">search</label>
+        <input type="search" name="search" id="nonfocus-search"  />
+      </div>
+      
+      <div>
+        <input type="checkbox" id="checkbox-1" style="appearance: none;">
+        <br>
+        <label for="checkbox-1" id="checkbox-label" > checkbox</label>
+      </div>
+
+      <ol class="list">
+        <li> one</li>
+        <li> two</li>
+        <li> three</li>
+      </ol>
+
+      
+      <div >
+       <p class="tooltip" data-tooltip="This is a tooltip text">tooltip</p>
+      </div>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!-- 
+​164.​ ​Style index.html from Week 1 using your design system variables, type scale, box model​
+​   corrections, backgrounds, and shadows​
+​165.​ ​All CSS must be in an external stylesheet - zero inline styles and zero style attributes in the​
+    ​HTML​
+​166.​ ​The page must look intentionally designed - not browser defaults - but does not need to be​
+    ​complete. Focus on applying today's concepts.​
+​167.​ ​Take a screenshot before (browser defaults) and after. Commit with message: 'style: apply day​
+​1 CSS to home page'​ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Home Page" />
+    <meta name="keywords" content="HTML ,CSS , JAVASCRIPT" />
+    <meta name="author" content="Abin Raj" />
+    <link rel="canonical" href="http://127.0.0.1:5500/day4/index.html" />
+    <meta property="og:title" content="Home page ford" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://127.0.0.1:5500/day4/index.html" />
+    <meta property="og:image" content="https://picsum.photos/id/237/100/100" />
+    <meta property="og:description" content="Home Page" />
+    <meta property="og:site_name" content="Project Main" />
+    <meta name="twiter:card" content="summary_large_image" />
+    <meta name="twiter:title" content="Home" />
+    <meta name="twiter:description" content="landing page" />
+    <meta name="twiter:image" content="https://picsum.photos/id/237/100/100" />
+    <meta name="theme-color" content="red" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header class="flex centre space-bw mt-4 mx-18">
+      <h1>Ford Corporate</h1>
+      <nav class="navigation">
+        <ul class="flex centre gap-2">
+          <li aria-current="page">
+            <p><a class="font-400" href="./index.html">Home</a></p>
+          </li>
+          <li>
+            <p><a href="./services.html">Services</a></p>
+          </li>
+          <li>
+            <p><a href="./team.html">Team</a></p>
+          </li>
+          <li>
+            <p><a href="./about.html">About</a></p>
+          </li>
+          <li>
+            <p><a href="./contact.html">Contact</a></p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="mx-18 text-white w-70v">
+          <h1 class="font-2xl mb-02">Welcome To A New Era of Ford</h1>
+
+          <p class="font-lg mb-3 w-70v">
+            At Ford , We belive in putting passion to work.For over 120
+            years,Ford has shown up for our customers and communities with a
+            unique blend of grit, optimism and resilience ,consistently keeping
+            an eye on the future. As Ford enters a new era ,our commitment to
+            enabling our customers to pursue their passion will remain at the
+            forefront of everything we do.
+          </p>
+        </div>
+      </div>
+      <div class="row mx-18">
+        <!-- <div class="column">
+          <nav>
+            <h2>Index</h2>
+            <ul>
+              <li>
+                <p><a href="#career">Career</a></p>
+              </li>
+              <li>
+                <p><a href="#investors">Investors</a></p>
+              </li>
+            </ul>
+          </nav>
+        </div> -->
+        <div class="column">
+          <div class="flex centre gap-2">
+            <div class="career flex h-500 end" id="career">
+              <div class="flex flex-col">
+                <h2>Career</h2>
+                <p>
+                  We&apos;re looking for talent that wants to take us somewhere
+                  new.
+                </p>
+                <a href="#">Join Us</a>
+              </div>
+            </div>
+            <div class="investors flex h-500 end" id="investors">
+              <div class="flex flex-col">
+                <h2>Investors</h2>
+                <p>
+                  Learn more about our latest news, events, financials,
+                  sustainability, governance, and other investor resources.
+                </p>
+                <a href="#">Dive into Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="new-details flex flex-col h-500 w-100 b-2px mt-3">
+            <h3>From the Road</h3>
+            <p>Learn what's new with Ford.</p>
+            <p><a href="#">Get More Details.</a></p>
+          </div>
+          <div>
+            <h3>Meet Our Leader</h3>
+            <blockquote>
+              <p>
+                &apos; I believe the distinction between a good company and a
+                great one is this: A good company delivers excellent products
+                and services; a great one delivers excellent products and
+                services and strives to make the world a better place.&apos;
+              </p>
+              <cite>Bill Ford</cite>
+            </blockquote>
+          </div>
+        </div>
+        <div class="column">
+          <div>
+            <h3>Feedbacks</h3>
+            <blockquote>
+              <p>
+                &apos; Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit quam provident omnis accusamus, porro vel reiciendis
+                quia quaerat! Amet odio eius provident hic atque voluptas
+                quibusdam ut doloremque esse nostrum!.&apos;
+              </p>
+              <cite>Jon Doe</cite>
+            </blockquote>
+            <blockquote>
+              <p>
+                &apos; Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit quam provident omnis accusamus, porro vel reiciendis
+                quia quaerat! Amet odio eius provident hic atque voluptas
+                quibusdam ut doloremque esse nostrum!.&apos;
+              </p>
+              <cite>Harry Kane</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mx-18 flex centre">
+      <p>Copyright &copy;2026</p>
+    </footer>
+  </body>
+</html>

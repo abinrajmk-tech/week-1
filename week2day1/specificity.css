@@ -1,0 +1,91 @@
+
+/* (0,0,0,1) */
+h1 {
+  color: rebeccapurple;
+}
+
+/* (0,0,1,1) */
+main :nth-child(2) {
+  color: rgb(0, 38, 71);
+}
+
+/* (0,0,1,0) */
+.heading {
+  color: aqua;
+}
+
+/* (0,0,0,2) */
+main h1 {
+  color: orange;
+}
+
+/* (0,0,0,2) */
+main > h1 {
+  color: aquamarine;
+}
+
+/* (0,0,0,2) */
+div + h1 {
+  color: indigo;
+}
+
+/* (0,0,1,1) */
+main :last-child {
+  color: rgb(69, 64, 73);
+}
+
+/* (0,0,1,1) */
+main :nth-last-child(2) {
+  color: coral;
+}
+
+/* (0,0,1,1) */
+.div_before_h1 + h1 {
+  color: cyan;
+}
+
+/* (0,0,1,1) */
+.main_class h1 {
+  color: black;
+}
+
+/* (0,0,0,1) */
+.h1 {
+  color: darkgreen;
+}
+
+/* (0,0,0,0) */
+* {
+  color: red;
+}
+
+/* (0,0,1,1) */
+h1.hclass {
+  color: blue;
+}
+
+/* rule using id may be the winning rule  among all these rules ( in this file) */
+/* but inline css have more priority than all of the above so it will override these rules */
+/*  #heading and h1.headclass rules are both marked important , but id selector  may have more priority . so it will be winning rule there  */
+/* final winning rule will be #heading (id selector) */
+
+
+/* (1,0,1,0,0) */
+#heading {
+  color: rgb(14, 42, 204) !important;
+}
+
+/* (1,0,0,1,0) */
+h1.headclass {
+  color: rgb(133, 0, 133) !important;
+}
+
+/* specificity */
+
+/*  inline seletor  highest priority 
+    id selector  (1,0,0)  
+    classes (0,1,0)
+    attribute selectors  (0,1,0)
+    pseudo classes (0,1,0)
+    Elements and pseudo elements (0,0,1)  
+    Universal selector and where  (0,0,0)*/

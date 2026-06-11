@@ -1,0 +1,42 @@
+:root {
+  --color-primary: grey;
+  --color-secondary: rgb(1, 21, 53);
+  --color-accent: rgb(0, 9, 24);
+  --color-success: rgb(11, 97, 0);
+  --color-warning: rgb(236, 90, 53);
+  --color-error: rgb(238, 58, 13);
+  --color-text: rgb(238, 238, 238);
+  --color-bg: rgb(252, 252, 252);
+  --color-gray-900: rgb(16, 24, 40);
+  --color-gray-800: rgb(31, 41, 55);
+  --color-gray-700: rgb(55, 65, 81);
+  --color-gray-600: rgb(75, 85, 99);
+  --color-gray-500: rgb(107, 114, 128);
+  --color-gray-hex: #808080;
+  --color-gray-rgb: rgb(128, 128, 128);
+  --color-gray-hsl: hsl(0, 0, 50.2);
+  --color-gray-okilch: oklch(59.99, 0, 129.63);
+}
+:root[data-theme="dark"] {
+  --color-primary: rgb(0, 0, 0);
+  --color-secondary: rgb(54, 54, 54);
+}
+
+.navigation a{
+    color: var(--color-secondary);
+}
+h1{
+    color: var(--color-primary);
+}
+body{
+    background-color: var(--color-bg);
+}
+h2{
+    color: var(--color-gray-700);
+}
+p{
+    color: var(--color-gray-600);
+}
+*{
+    color: var(--color-gray-500);
+}

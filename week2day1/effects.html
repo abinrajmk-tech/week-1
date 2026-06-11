@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backgrounds, Borders and Shadows</title>
+  </head>
+  <body>
+    <div
+      style="
+        background-image: url(&quot;https://picsum.photos/id/26/4209/2769&quot;);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      "
+    >
+      <div>
+        <div
+          style="
+            width: 100%;
+            height: 60px;
+            background-image: linear-gradient(
+              to left,
+              rgb(22, 16, 16),
+              rgba(104, 100, 100, 0)
+            );
+            color: aliceblue;
+          "
+        >
+          linear-gradient 1
+        </div>
+        <div
+          style="
+            background-color: rgb(49, 49, 49);
+            width: 300px;
+            height: 400px;
+            text-align: center;
+          "
+        >
+          background-color
+        </div>
+        <div
+          style="
+            background-image: url(&quot;https://picsum.photos/id/237/300/400&quot;);
+            width: 300px;
+            height: 400px;
+          "
+        >
+          <p>Background Image</p>
+        </div>
+
+        <div
+          style="
+            background-image: url(&quot;https://picsum.photos/id/23/300/400&quot;);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 300px;
+          "
+        >
+          <p style="overflow: hidden; text-overflow: ellipsis">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            dolores debitis possimus fuga illo saepe est porro tempore, dolor
+            magnam totam voluptatum ducimus quas dolore nostrum, explicabo
+            laudantium labore, molestias aspernatur non suscipit nihil delectus
+            facere! Repellat sint temporibus quos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Et pariatur nihil perspiciatis quas.
+            Inventore quae tenetur commodi dignissimos eius? Officiis debitis
+            aliquam repellat eaque voluptas voluptate ea consequuntur sint ipsa
+            ipsam expedita hic perferendis Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Assumenda accusantium aperiam cumque
+            molestias. Nisi esse ad dolore consequuntur voluptate iste laborum
+            nostrum excepturi cum, doloribus commodi suscipit ullam accusantium
+            illum ab nihil blanditiis placeat, laboriosam totam? Quas assumenda
+            facilis reprehenderit!
+          </p>
+        </div>
+        <div
+          style="
+            background-image: radial-gradient(
+              rgb(109, 108, 108),
+              rgba(32, 32, 32, 0.603),
+              rgba(0, 0, 0, 0.788)
+            );
+            width: 100%;
+            height: 200px;
+            color: aliceblue;
+          "
+        >
+          radial-gradient 1
+        </div>
+        <div
+          style="
+            width: 100%;
+            height: 400px;
+            /* background-color: red; */
+            background-image: linear-gradient(
+              to right,
+              rgba(255, 0, 0, 0),
+              rgb(22, 16, 16)
+            );
+            color: aliceblue;
+          "
+        >
+          linear-gradient 2
+        </div>
+        <div
+          style="
+            background-image: radial-gradient(
+              rgb(109, 108, 108),
+              rgba(32, 32, 32, 0.603),
+              transparent /* rgba(0, 0, 0, 0.788) */
+            );
+            width: 100%;
+            height: 200px;
+            color: aliceblue;
+          "
+        >
+          radial-gradient 2
+        </div>
+      </div>
+
+      <!--------------- Border styles------------------------------- -->
+
+      <div style="display: flex">
+        <div
+          style="
+            background-color: rgb(196, 195, 195);
+            width: 25%;
+            height: 200px;
+            border: 4px solid black;
+            margin: 2px;
+          "
+        >
+          Solid border
+        </div>
+        <div
+          style="
+            background-color: rgb(196, 195, 195);
+            width: 25%;
+            height: 200px;
+            border: 4px dotted blue;
+            margin: 2px;
+          "
+        >
+          dotted border
+        </div>
+        <div
+          style="
+            background-color: rgb(196, 195, 195);
+            width: 25%;
+            height: 200px;
+            border: 4px double rgb(0, 0, 0);
+            margin: 2px;
+          "
+        >
+          double border
+        </div>
+        <div
+          style="
+            background-color: rgb(196, 195, 195);
+            width: 25%;
+            height: 200px;
+            border: 4px solid rgb(0, 0, 0);
+            border-radius: 50%;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          circle border radius
+        </div>
+      </div>
+      <div style="display: flex">
+        <div
+          style="
+            background-color: rgb(196, 195, 195);
+            width: 50%;
+            height: 200px;
+            border: 4px solid rgb(0, 0, 0);
+            border-radius: 999px;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          pill
+        </div>
+        <div
+          style="
+            background-color: rgb(196, 195, 195);
+            width: 50%;
+            height: 200px;
+            border: 4px solid rgb(0, 0, 0);
+            border-radius: 80% 40% 90% 10%;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          Individual corners
+        </div>
+      </div>
+
+      <!-- a soft box-shadow (elevation), a hard offset shadow, an inner inset shadow, and layered​ ​multiple shadows on one element -->
+      <div style="display: flex; gap: 40px; justify-content: center">
+        <div
+          style="
+            background-color: rgb(74, 80, 80);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 400px;
+            box-shadow: 10px 5px rgb(161, 155, 155);
+          "
+        >
+          hard shadow
+        </div>
+        <div
+          style="
+            background-color: rgb(173, 173, 173);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 400px;
+            box-shadow: 10px 20px 10px rgb(190, 146, 146);
+          "
+        >
+          soft shadow
+        </div>
+        
+        <div
+          style="
+            background-color: rgb(248, 248, 248);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 400px;
+            box-shadow: inset 10px 10px rgb(175, 108, 108);
+          "
+        >
+          inset shadow
+        </div>
+        
+      </div>
+      <div style="display: flex; justify-content: center;  margin-top: 30px;">
+        <div
+          style="
+            background-color: rgb(94, 94, 94);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 400px;
+            box-shadow:
+              10px 10px 10px rgb(247, 247, 247),
+              20px 20px 20px rgb(235, 160, 160),
+              30px 30px 30px rgb(53, 50, 50);
+          "
+        >
+          multiple layered shadow
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

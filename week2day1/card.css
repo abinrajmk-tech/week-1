@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  background: #131417;
+  color: white;
+  font-family: "Inter";
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.card-details h2 {
+  font-size: 2em;
+}
+.card-details p {
+  color: #94969b;
+}
+.card {
+  margin: auto;
+  max-width: 300px;
+  padding: 1em;
+  background-color: rgb(30, 31, 38);
+  border-radius: 2em;
+  height: 500px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0.5em 0.5em rgb(40, 41, 48);
+}
+.card-body {
+  margin-left: 10px;
+}
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+.card-thumbnail {
+  max-width: 100%;
+  object-fit: cover;
+}
+.card-thumbnail img {
+  border-radius: 2em;
+}
+.card-footer {
+  display: flex;
+  margin-left: 10%;
+  margin-top: auto;
+  margin-right: 10%;
+}
+.card-footer p {
+  font-size: 2em;
+  margin-right: 1.5em;
+}
+.card-footer button {
+  font-size: 1em;
+  margin-left: auto;
+  border-radius: 0.6em;
+  border: transparent;
+  width: 6em;
+  padding: 0.5em;
+}
+.card-footer button:hover {
+  /* border: 0.2em solid rgb(105, 223, 134) ; */
+  background-color: green;
+}
+
+.card:hover,
+.card-2:hover {
+  box-shadow: 0.5em 0.5em rgb(52, 53, 54);
+}
+.card-2 {
+  margin: auto;
+  max-width: 30em;
+  padding: 1em;
+  background-color: rgb(30, 31, 38);
+  border-radius: 2em;
+  display: flex;
+  box-shadow: 0.5em 0.5em rgb(40, 41, 48);
+  justify-content: center;
+  align-items: center;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+.card-content > .card-body > .card-details > h2 {
+  margin-bottom: 0.4em;
+}
+.card-content > .card-body > .card-details > p {
+  margin-bottom: 1em;
+}
+.card-content > .card-body > .card-details {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .card-2 {
+    display: none;
+  }
+  .card {
+    display: flex;
+  }
+}
+.container {
+  /* border: 2px solid white; */
+  width: 90vw;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  gap: 2em;
+  justify-content: space-around;
+}
+.card-holder {
+  flex-basis: 30%;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

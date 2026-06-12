@@ -69,8 +69,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   border: 2px solid black;
-  background: ;
-  /* flex-wrap: wrap; */
 }
 .shrink-1 {
   background-color: rgb(59, 185, 20);

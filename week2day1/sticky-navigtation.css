@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+h2,
+h3 {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+section > p {
+  margin-bottom: 1em;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100vw;
+  z-index: 100;
+  margin-top: 1%;
+  padding-top: 1%;
+  background-color: rgb(245, 245, 245);
+}
+header h1 {
+  margin-right: 10%;
+  font-family: "Roboto", sans-serif;
+  font-size: 4em;
+}
+header nav ul > li > a {
+  font-size: 1.4em;
+  color: black;
+  font-weight: 100;
+}
+header nav ul > li > a:hover {
+  color: rgb(128, 17, 17);
+}
+header nav ul > li > a:focus-visible {
+  color: rgb(126, 128, 243);
+  border: 2px solid black;
+}
+nav ul {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 20%;
+}
+.nav-btns {
+  display: flex;
+  gap: 1em;
+}
+.signup-btn {
+  width: 5em;
+  height: 2.5em;
+  padding: 1%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 117, 208);
+  color: white;
+  border-radius: 6px;
+  border-color: transparent;
+  gap: 2px;
+}
+.login-btn {
+  width: 5em;
+  height: 2.5em;
+  padding: 1%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: rgb(27, 117, 208);
+  border-radius: 6px;
+  border: 1px solid rgb(27, 117, 208);
+  box-shadow: none;
+  /* border-color: rgb(27, 117, 208); */
+}
+.img-grp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav {
+  display: block;
+}
+.lines {
+  height: 0.3em;
+  width: 2em;
+  margin: 6px 0;
+  background: rgb(27, 117, 208);
+}
+.hamburger {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .nav-btns {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  img {
+    width: 400px;
+    margin-bottom: 2em;
+  }
+}
+.stuck-top {
+  container-type: scroll-state;
+  position: sticky;
+  top: 0px;
+
+  > header {
+    @container scroll-state(stuck: top) {
+      box-shadow: 5px 5px rgba(0, 0, 0, 0.24);
+    }
+  }
+}

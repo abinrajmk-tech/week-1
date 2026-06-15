@@ -1,0 +1,221 @@
+<!--188.Take your checkout form from Wednesday and style it using Flexbox​
+    ​190.Two-column layout on desktop: label left (fixed 180px), input right (fills remaining width)​
+    189.​On mobile (below 600px): stack label above input​
+    191.paired fields (e.g. first name + last name, expiry month + year) side by side using a flex row​
+        with gap​
+    ​192.​​Submit and cancel buttons right-aligned using a flex row with justify-content: flex-end​
+    ​193.​Style focus states, error states (red border + error message below), and the submit button​
+        ​hover state​ -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout</title>
+        <link rel="stylesheet" href="checkout.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Checkout</h1>
+        </header>
+        <main>
+            <form method="post">
+                <fieldset>
+                    <legend>Fields marked * are required</legend>
+                    <fieldset>
+                        <legend>Delivery Adderess</legend>
+                        <div class="section">
+                            <label for="fullname">First Name *</label>
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    id="fullname"
+                                    name="fullname"
+                                    required
+                                />
+                                <p class="error-message">
+                                    First name is required
+                                </p>
+                            </div>
+
+                            <label for="fullname">Last Name *</label>
+
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    id="fullname"
+                                    name="fullname"
+                                    required
+                                />
+                                <p class="error-message">
+                                    Last name is required
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label for="address1">Address line 1 *</label>
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    name="address1"
+                                    id="address1"
+                                    required
+                                />
+                                <p class="error-message">Address is required</p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label for="address2">Address line 2 *</label>
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    name="address2"
+                                    id="address2"
+                                    required
+                                />
+                                <p class="error-message">Address is required</p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label for="city">city *</label>
+
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    name="city"
+                                    id="city"
+                                    required
+                                />
+                                <p class="error-message">city is required</p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label for="postcode">postcode *</label>
+
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    name="postcode"
+                                    id="postcode"
+                                    required
+                                />
+                                <p class="error-message">
+                                    postcode is required
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label for="country">Country *</label>
+
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    list="countries"
+                                    name="country"
+                                    id="country"
+                                    required
+                                />
+                                <p class="error-message">country is required</p>
+                            </div>
+                            <datalist id="countries">
+                                <option value="India"></option>
+                                <option value="Algeria"></option>
+                                <option value="Albania"></option>
+                                <option value="Andorra"></option>
+                                <option value="Germany"></option>
+                                <option value="Australia"></option>
+                                <option value="Angola"></option>
+                                <option value="Argentina"></option>
+                                <option value="Armenia"></option>
+                                <option value="Azerbaijan"></option>
+                                <option value="Madagascar"></option>
+                                <option value="Malawi"></option>
+                                <option value="Maldives"></option>
+                                <option value="Mali"></option>
+                                <option value="Malaysia"></option>
+                                <option value="Malta"></option>
+                                <option value="Chad"></option>
+                                <option value="Chile"></option>
+                                <option value="China"></option>
+                                <option value="Colombia"></option>
+                            </datalist>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        <div class="section">
+                            <label for="card_number">Card Number *</label>
+
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    maxlength="16"
+                                    id="card_number"
+                                    required
+                                />
+                                <p class="error-message">
+                                    card number is required
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label for="expiry-month">Expiry month *</label>
+
+                            <div class="input-holder">
+                                <input
+                                    type="month"
+                                    min="2026-06"
+                                    id="expiry-month"
+                                    name="expiry-month"
+                                    required
+                                />
+                                <p class="error-message">
+                                    Expiry month is required
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <label for="cvv">cvv *</label>
+
+                            <div class="input-holder" id="cvv-holder">
+                                <input
+                                    type="password"
+                                    id="cvv"
+                                    aria-describedby="cvv-desc"
+                                    name="cvv"
+                                    required
+                                />
+                                <p class="error-message">cvv is required</p>
+
+                                <p1 role="tooltip" id="cvv-desc"
+                                    >3 or 4 digits on back of your Card</p1
+                                >
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Order Notes</legend>
+                        <div class="section">
+                            <label for="optional_text">Optional Text</label>
+
+                            <div class="input-holder">
+                                <input
+                                    type="text"
+                                    maxlength="500"
+                                    name="optional_text"
+                                    id="optional_text"
+                                />
+                            </div>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

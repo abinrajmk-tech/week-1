@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    height: 90px;
+}
+a {
+    color: black;
+    font-size: 1em;
+    font-weight: 400;
+}
+.logo {
+    display: flex;
+    gap: 2em;
+}
+header .logo,
+nav {
+    margin-bottom: 1em;
+}
+.header-nav ul {
+    display: flex;
+    gap: 3em;
+}
+.aside {
+    width: 700px;
+}
+.sidebar {
+    display: flex;
+    min-height: fit-content;
+    height: 50vh;
+    width: 400px;
+    background-color: whitesmoke;
+    line-height: 2;
+    padding-left: 1em;
+}
+.aside aside {
+    background-color: whitesmoke;
+    display: flex;
+    padding-left: 1em;
+    flex-direction: column;
+    gap: 2em;
+}
+.sidebar ul {
+    margin-left: 1em;
+}
+main {
+    display: flex;
+    flex-basis: 1;
+}
+.recent-post nav ul {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+.categories nav ul {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+h2,
+h3 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+article {
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0;
+    transition: box-shadow, 1ms;
+}
+article:hover {
+    box-shadow: 0 0 10px rgb(92, 92, 92);
+}
+main + footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(219, 218, 218);
+}
+a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+    color: cadetblue;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .main-content {
+        order: 1;
+    }
+    .sidebar {
+        order: 2;
+    }
+    .aside {
+        order: 3;
+        width: 200px;
+    }
+    img {
+        width: 300px;
+    }
+    .logo img {
+        width: 50px;
+        height: 50px;
+        margin-top: 1em;
+    }
+}

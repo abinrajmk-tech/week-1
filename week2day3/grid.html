@@ -1,0 +1,94 @@
+<!-- ​202.​
+​Create grid.html with seven grid containers, each demonstrating a different column sizing​
+​ ethod: fixed px, percentage %, fr units, auto, minmax(200px, 1fr), repeat(3, 1fr), and​
+m
+​repeat(auto-fill, minmax(200px, 1fr))​
+​203.​ ​Show the fr unit with different ratios (1fr 2fr 1fr) and verify the proportions in DevTools​
+​204.​
+​Demonstrate the implicit grid: add more children than your explicit tracks. Use grid-auto-rows:​
+​minmax(100px, auto) to size overflow rows.​
+​205.​ ​Show column-gap, row-gap, and the gap shorthand​ -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid container</title>
+        <link rel="stylesheet" href="grid.css" />
+    </head>
+    <body>
+        <h1>Grid</h1>
+        <h2>fixed px</h2>
+        <div class="container container-1">
+            <div class="item">300px</div>
+            <div class="item">100px</div>
+            <div class="item">100px</div>
+            <div class="item">100px</div>
+        </div>
+        <h2>percentage %</h2>
+        <div class="container container-2">
+            <div class="item">10%</div>
+            <div class="item">20%</div>
+            <div class="item">10%</div>
+            <div class="item">40%</div>
+        </div>
+        <h2>fraction</h2>
+        <div class="container container-3">
+            <div class="item">1fr</div>
+            <div class="item">2fr</div>
+            <div class="item">1fr</div>
+            <div class="item">4fr</div>
+        </div>
+        <h2>Auto</h2>
+        <div class="container container-4">
+            <div class="item">400px</div>
+            <div class="item">Auto</div>
+            <div class="item">1fr</div>
+            <div class="item">2fr</div>
+        </div>
+        <h2>minmax</h2>
+        <div class="container container-5">
+            <div class="item">minmax(200px,1fr)</div>
+            <div class="item">2fr</div>
+            <div class="item">1fr</div>
+            <div class="item">2fr</div>
+        </div>
+        <h2>repeat(3,1fr)</h2>
+        <div class="container container-6">
+            <div class="item">1fr</div>
+            <div class="item">1fr</div>
+            <div class="item">1fr</div>
+            <div class="item">1fr</div>
+        </div>
+        <h2>repeat(auto-fill,minmax(200px,1fr))</h2>
+        <div class="container container-7">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>grid-auto-rows:minmax(100px,auto)</h2>
+        <div class="container container-8">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>column-gap:2em and row-gap:1em</h2>
+        <div class="container container-9">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <h2>gap shorthand gap: 1em 2em</h2>
+        <div class="container container-10">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </body>
+</html>

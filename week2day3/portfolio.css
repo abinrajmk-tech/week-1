@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+    --bg-color: white;
+    --box-shadow: 3px 3px rgb(230, 212, 208);
+    --item-bg: whitesmoke;
+    --item-br: 3em;
+}
+
+body {
+    color: black;
+    font-family: "Inter";
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    background-color: var(--bg-color);
+    gap: 2em;
+    height: 90vh;
+}
+.partition {
+    box-shadow: var(--box-shadow);
+    border-radius: 3em;
+    text-align: center;
+}
+.projects {
+    overflow: hidden;
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms;
+}
+
+.projects .image img {
+    width: 1090px;
+    transition: all 300ms;
+}
+.projects:hover .image img {
+    width: 600px;
+}
+.projects .overlay-content {
+    line-height: 1.5;
+    padding: 2%;
+}
+.stats {
+    overflow: hidden;
+    transition: all 300ms;
+    display: flex;
+    flex-direction: column;
+}
+.stats .image img {
+    width: 100%;
+    height: 300px;
+    transition: all 300ms;
+}
+.stats:hover .image img {
+    width: 80%;
+    height: 100px;
+}

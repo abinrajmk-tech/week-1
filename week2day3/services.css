@@ -1,0 +1,137 @@
+* {
+    padding: 0%;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+body {
+    background-color: whitesmoke;
+}
+
+.main-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+    min-height: 110vh;
+}
+
+header {
+    grid-area: header;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    background-color: white;
+}
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2em;
+    margin-right: 3em;
+}
+
+main {
+    grid-area: main;
+    border: 2px solid black;
+    padding-left: 4em;
+}
+footer {
+    grid-area: footer;
+    border: 2px solid black;
+}
+.service-container {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+article,
+.call-to-action-text,
+.call-to-action-form {
+    background-color: white;
+    transition: box-shadow 1ms;
+    box-shadow: 1px 2px rgb(212, 212, 212);
+}
+article:hover,
+.call-to-action > div:hover,
+table:hover {
+    box-shadow: 1px 2px rgb(134, 134, 134);
+}
+.call-to-action {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2em;
+}
+.call-to-action-form,
+.call-to-action-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 5% 10%;
+}
+.call-to-action-form button {
+    height: 3em;
+    width: 20%;
+    background-color: rgb(226, 119, 80);
+    align-self: center;
+    border-radius: 2em;
+    border: 0;
+    box-shadow: 1px 3px rgb(247, 153, 120);
+}
+.call-to-action-form input {
+    height: 3em;
+    width: 70%;
+    text-align: center;
+    border-radius: 2em;
+}
+.featured {
+    background-color: rgb(247, 238, 238);
+}
+table {
+    border: 2px solid black;
+    line-height: 1.5;
+    border-collapse: collapse;
+}
+thead th {
+    border: 2px solid black;
+}
+td {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+.empty-col {
+    border: 0;
+}
+footer {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    .service-container {
+        display: grid;
+        gap: 2em;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 2em;
+        padding-right: 1em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .service-container {
+        display: grid;
+        gap: 2em;
+        grid-template-columns: 1fr;
+        padding-bottom: 2em;
+        padding-right: 1em;
+    }
+    .call-to-action {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+}

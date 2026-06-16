@@ -1,0 +1,238 @@
+<!-- ​Apply full Grid styling to services.html​
+​Three-column service card grid using CSS Grid (not Flexbox)​
+​Pricing comparison table styled with a highlighted 'recommended' column​
+​Call-to-action section with a two-column Grid (text + form)​
+​Fully responsive at 768px (two columns) and 480px (one column)​ -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Service page ford" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Service Page" />
+        <meta property="og:site_name" content="Project Main" />
+        <meta
+            property="og:url"
+            content="http://127.0.0.1:5500/day4/service.html"
+        />
+        <title>Services</title>
+        <link rel="stylesheet" href="services.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <header>
+                <h1>Services</h1>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li aria-current="page">
+                            <a href="./services.html">Services</a>
+                        </li>
+                        <li><a href="./team.html">Team</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section class="service-section">
+                    <h2>Our Services</h2>
+                    <div class="service-container">
+                        <article>
+                            <h2>Ford App</h2>
+                            <p>
+                                The Ford app is everything you need to elevate
+                                your Ford ownership — all in one place. Formerly
+                                known as FordPass app, the Ford app gives you
+                                access to features like remote start, lock and
+                                unlock, and vehicle stats.a
+                            </p>
+                            <ul>
+                                <li>
+                                    Vehicle Management :
+                                    <ul>
+                                        <li>keep track of your fuel</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Remote Controls :
+                                    <ul>
+                                        <li>Get Added Controls</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h2>vehicle</h2>
+                            <p>
+                                Get Ford experts to service your car wherever
+                                you want - at home or office - at no additional
+                                charges. Simply contact your nearest Ford dealer
+                                from the list below to book your Doorstep
+                                Service appointment today.
+                            </p>
+                            <ul>
+                                <li>Recalls</li>
+                                <li>Maintenance Schedule</li>
+                                <li>Owner&apos;s Manual</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h2>Other Resources</h2>
+                            <p>
+                                Every new Ford vehicle comes with a New Vehicle
+                                Limited Warranty.
+                            </p>
+                            <ul>
+                                <li>Warranty</li>
+                                <li>Ford Protect</li>
+                                <li>Ford Rewards</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="call-to-action">
+                        <div class="call-to-action-text">
+                            <h2>For you, and the people who Care for you</h2>
+                        </div>
+                        <div class="call-to-action-form">
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Email"
+                            />
+                            <button>Reach Us out</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="comparison-container">
+                    <h2>Three Shots of Pure Adrenaline</h2>
+                    <table>
+                        <caption>
+                            EcoBoost Comparisons
+                        </caption>
+                        <colgroup>
+                            <col />
+                            <col />
+                            <col class="featured" />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="empty-col"></th>
+                                <th colspan="3">MODELS</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Features</th>
+                                <th scope="col">Mustang EcoBoost Fastback</th>
+                                <th scope="col">
+                                    Mustang EcoBoost Premium Fastback
+                                </th>
+                                <th scope="col">Mustang GT Fastback</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Price</th>
+                                <td>$30,333</td>
+                                <td>$30,333</td>
+                                <td>$34,333</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Engine</th>
+                                <td>2.3L EcoBoost engine with 315 hp68</td>
+                                <td>2.3L EcoBoost engine with 315 hp68</td>
+                                <td>5.0L Ti-VCT V8 engine with 480 hp68</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Colors</th>
+                                <td>Extra-cost color show</td>
+                                <td>Extra-cost color show</td>
+                                <td>Extra-cost color show</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Display</th>
+                                <td>
+                                    12.4" LCD digital cluster w/ IOD message
+                                    center and 13.2" LCD capacitive touchscreen
+                                    with swipe capability
+                                </td>
+                                <td>
+                                    12.4" LCD digital cluster w/ IOD message
+                                    center and 13.2" LCD capacitive touchscreen
+                                    with swipe capability
+                                </td>
+                                <td>
+                                    12.4" LCD digital cluster w/ IOD message
+                                    center and 13.2" LCD capacitive touchscreen
+                                    with swipe capability
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Seats</th>
+                                <td>Cloth seats</td>
+                                <td>Cloth seats</td>
+                                <td>Cloth seats</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Lock</th>
+                                <td>Electronic line-lock (track use only)</td>
+                                <td>Electronic line-lock (track use only)</td>
+                                <td>Electronic line-lock (track use only)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Modes</th>
+                                <td>Selectable Drivine Mode</td>
+                                <td>
+                                    6-speed manual transmission with rev
+                                    matching
+                                </td>
+                                <td>
+                                    6-speed manual transmission with rev
+                                    matching
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Axle</th>
+                                <td>3.55 limited-slip rear axle</td>
+                                <td>4.55 limited-slip rear axle</td>
+                                <td>4.55 limited-slip rear axle</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Exhaust</th>
+                                <td>
+                                    Available active valve performance exhaust
+                                </td>
+                                <td>
+                                    Available active valve performance exhaust
+                                </td>
+                                <td>
+                                    Available active valve performance exhaust
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Connectivity Features</th>
+                                <td>
+                                    Ford Connectivity Package and Co-Pilot360®
+                                    Technology
+                                </td>
+                                <td>
+                                    Ford Connectivity Package and Co-Pilot360®
+                                    Technology
+                                </td>
+                                <td>
+                                    Ford Connectivity Package and Co-Pilot360®
+                                    Technology
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            <footer>
+                <p>Copyright &copy;2026</p>
+            </footer>
+        </div>
+    </body>
+</html>

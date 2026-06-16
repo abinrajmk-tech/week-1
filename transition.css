@@ -1,0 +1,79 @@
+.container {
+    padding: 2em;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}
+.container div {
+    margin: 10px;
+}
+.title,
+.desc,
+.buttons {
+    opacity: 0;
+}
+.transition-time div {
+    background-color: rgba(83, 143, 128, 0.753);
+    width: 400px;
+    padding: 1em;
+    margin: 1em;
+    height: 20px;
+}
+.linear {
+    animation: time-function linear 5s infinite;
+}
+.ease {
+    animation: time-function ease 5s infinite;
+}
+.ease-in {
+    animation: time-function ease-in 5s infinite;
+}
+
+.ease-out {
+    animation: time-function ease-out 5s infinite;
+}
+.ease-in-out {
+    animation: time-function ease-in-out 5s infinite;
+}
+button:hover {
+    translate: 0 10px;
+}
+buttons {
+    transition: translate 10s cubic-bezier(0.3, 0.8, 0.3, 2.3);
+}
+@keyframes time-function {
+    0% {
+        width: 400px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+.container:hover .card .title {
+    animation: staggered 1s;
+}
+.container:hover .card .desc {
+    animation: staggered 1s;
+    animation-delay: 300ms;
+}
+.container:hover .card .buttons {
+    animation: staggered 1s;
+    animation-delay: 600ms;
+}
+@keyframes staggered {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+input {
+    outline: 1px solid rgb(184, 11, 11);
+    transition: ouline 1s;
+}
+input:focus-visible {
+    outline: 1px dotted rgb(0, 70, 128);
+}

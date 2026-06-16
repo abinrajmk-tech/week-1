@@ -1,0 +1,41 @@
+<!-- ​245.​
+​Create transitions.html and demonstrate all five timing functions on identical boxes: linear,​
+​ease, ease-in, ease-out, ease-in-out - record the visual difference​
+​246.​ ​Use the DevTools transition editor to find a bouncy cubic-bezier value. Apply it to a button hover​
+​effect.​
+​247.​ ​Build a staggered sequence: when hovering a card, the title transitions first, then the​
+​description 50ms later, then the button 100ms later - using transition-delay​
+​248.​ ​Add a transition on outline for focus states - the ring should animate in, not snap. Never remove​
+​the focus ring, only style it.​ -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="transition.css" />
+        <title>Transitions</title>
+    </head>
+    <body>
+        <h1>Transitions</h1>
+        <div class="transition-time">
+            <div class="linear">linear</div>
+            <div class="ease">ease</div>
+            <div class="ease-in">ease-in</div>
+            <div class="ease-out">ease-out</div>
+            <div class="ease-in-out">ease-in-out</div>
+        </div>
+        <h2>Staggered sequence</h2>
+        <div class="container">
+            <div class="card">
+                <div class="title"><h2>Lorem</h2></div>
+                <div class="desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste, eius?
+                </div>
+                <div class="buttons"><button>Know More</button></div>
+            </div>
+        </div>
+        <input type="text" placeholder="focus animation" />
+    </body>
+</html>

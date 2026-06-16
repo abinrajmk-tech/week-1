@@ -1,0 +1,269 @@
+<!-- 194. Style blog.html from Week 1 completely using Flexbox for all layout.
+195. Sticky header using Flexbox. Sidebar + main content as a Flexbox row. Each article card using internal Flexbox for layout.
+196. ​Responsive: single column below 768px using media query.
+197. Add hover effects on article cards: lift with box-shadow transition -->
+
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>Blog</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width , initial-scale=1.0"
+        />
+        <link rel="stylesheet" href="blog.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="https://picsum.photos/50/50" alt="logo" />
+                <div>
+                    <h1>Daily News</h1>
+                    <p><small>Let The Truth Prevail</small></p>
+                </div>
+            </div>
+            <nav aria-label="Main Navigation" class="header-nav">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="blog">
+            <div class="sidebar">
+                <div>
+                    <h2>Index</h2>
+                <ul>
+                    <li><a href="#climate">Article 1</a></li>
+                    <li><a href="#sports">Article 2</a></li>
+                    <li><a href="#science">Article 3</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <article id="climate">
+                    <header>
+                        <h2>
+                            Is climate research being held back by local
+                            instrumentation?
+                        </h2>
+                        <p>
+                            <time datetime="2026-06-04 08:30"
+                                >June 4,2026 08:30am IST</time
+                            >
+                        </p>
+                    </header>
+
+                    <section>
+                        <h3>
+                            What are India&apos;s biggest gaps in climate
+                            research? Why do prototypes fail to become products?
+                        </h3>
+
+                        <img
+                            src="https://picsum.photos/600/250?random=2"
+                            alt="logo"
+                        />
+
+                        <p>
+                            Although renewable energy seems to be the right
+                            solution to replace polluting sources, the report
+                            cautions that studies are needed to assess the
+                            long-term effects of uncontrolled tapping of natural
+                            resources.
+                        </p>
+
+                        <h3>What is its central message?</h3>
+                        <p>
+                            The central message of the report is that India has
+                            effectively lost the ability to build its own
+                            scientific instruments. “Today, virtually no company
+                            in India manufactures quality scientific instruments
+                            for climate research,” it states, adding that
+                            “billions of rupees have been spent and continue to
+                            be spent on procuring instruments manufactured
+                            elsewhere.” Worse, imported instruments are often
+                            used “without knowing the principle of operation,
+                            the built-in assumptions… and their limitations,”
+                            and left uncalibrated for years — producing, in the
+                            report&apos;s words, “incorrect data being reported
+                            in national and international journals, often
+                            leading to questions on the credibility of Indian
+                            science.”
+                        </p>
+                    </section>
+                    <footer>
+                        <span><b>Jacob Koshy</b></span>
+
+                        <a href="#climate">climate change </a>
+                    </footer>
+                </article>
+
+                <!-- _____________________________article 2 _________________________________ -->
+                <article id="science">
+                    <header>
+                        <h2>
+                            India vulnerable to chronic aircraft noise thanks to
+                            regulatory gaps
+                        </h2>
+                        <p>
+                            <time datetime="2026-06-03 07:30"
+                                >June 3,2026 07:30am IST</time
+                            >
+                        </p>
+                    </header>
+                    <section>
+                        <h3>
+                            Researchers have said the health effects of noise
+                            depend on how loud it is as well as on how often it
+                            occurs, how long it continues for, whether people
+                            have enough time to recover before the next exposure
+                            — especially as they sleep at night — and cumulative
+                            long-term exposure
+                        </h3>
+                        <img
+                            src="https://picsum.photos/600/250?random=1"
+                            alt="an image from picsum"
+                        />
+
+                        <p>
+                            Every few minutes, aircraft descend over densely
+                            populated neighbourhoods near India’s major
+                            airports. For the people here, the noise has been
+                            almost constant for years, often even continuing
+                            through the night. India’s aviation and
+                            environmental regulations require airports to map
+                            the aircraft noise exposure using decibel contours —
+                            maps showing how the air pressure varies around the
+                            airport. Official assessments have also identified
+                            high-noise zones extending into residential areas.
+                        </p>
+                        <p>
+                            But even as India’s airports monitor sound with
+                            increasing technical precision, they have paid far
+                            less attention to what years of repeated exposure
+                            may be doing to people. Research on the long-term
+                            biological effects of chronic aircraft noise in
+                            India is also limited. Some emerging research has
+                            pointed to inflammation, stress-related changes, and
+                            even cognitive effects. The fact remains, however,
+                            that the gap between regulatory noise monitoring and
+                            understanding biological risk is widening.
+                        </p>
+                    </section>
+                    <footer>
+                        <span><b>Rohan Singh</b></span>
+                        <a href="#science">science </a>
+                    </footer>
+                </article>
+
+                <article id="sports">
+                    <header>
+                        <h2>
+                            UEFA removes Azerbaijani club from Conference League
+                            for past match-fixing case
+                        </h2>
+                        <p>
+                            <time datetime="2026-06-03 04:16"
+                                >June 4,2026 08:30am IST</time
+                            >
+                        </p>
+                    </header>
+                    <section>
+                        <h3>
+                            Turan finished third in the Azerbaijani league to
+                            earn a place in the second qualifying round of the
+                            third-tier Conference League
+                        </h3>
+                        <img
+                            src="https://picsum.photos/600/250?random=3"
+                            alt="an image from picsum"
+                        />
+                        <p>
+                            UEFA removed Azerbaijani club Turan Tovuz from next
+                            season's Conference League because of past
+                            match-fixing by players, the European soccer body
+                            said on Wednesday
+                            <time datetime="2026-06-03">June 3,2026</time>
+                        </p>
+                        <p>
+                            The club said in a statement it will challenge the
+                            decision at the Court of Arbitration for Sport.
+                            Among the 28 individuals banned by the AFFA were
+                            Turan Tovuz players Gojayev Sanan, Rustamov Misir,
+                            Baghirov Emin, Sadigov Ilkin, Mammadov Rufət,
+                            Taghiyev Eltay and Guluzadeh Shahin, for their
+                            involvement in the manipulation of games.
+                        </p>
+                        <p>
+                            Turan Tovuz have said that alongside appealing
+                            UEFA’s decision to CAS, they would not be changing
+                            their preparations for the 2026-27 season, including
+                            a planned training camp in Turkey
+                        </p>
+                    </section>
+                </article>
+                <footer>
+                    <span><b> Colin Millar</b></span>
+                    <a href="#sports">sports</a>
+                </footer>
+            </div>
+            <div class="aside">
+                <aside>
+                    <div class="recent-post">
+                        <h2>Recent Posts</h2>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#climate"
+                                        >Is climate research being held back by
+                                        local instrumentation?
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#sports"
+                                        >India vulnerable to chronic aircraft
+                                        noise thanks to regulatory gaps
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#science"
+                                        >UEFA removes Azerbaijani club from
+                                        Conference League for past match-fixing
+                                        case
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="categories">
+                        <h2>Categories</h2>
+                        <nav aria-label="Category nav">
+                            <ul>
+                                <li>
+                                    <a href="#climate">Climate </a>
+                                </li>
+                                <li>
+                                    <a href="#sports">Sports </a>
+                                </li>
+                                <li>
+                                    <a href="#science">Science </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer id="about">
+            <h3>Daily News</h3>
+            <p><a href="mailto:">dailynews@nomail.com</a></p>
+            <p>© CopyRight 2026</p>
+        </footer>
+    </body>
+</html>

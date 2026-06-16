@@ -1,0 +1,84 @@
+<!-- ​184.​
+​Build the classic Holy Grail: full-width header, three-column middle (fixed-width left sidebar,​
+​flexible main content, fixed-width right aside), full-width footer - using only Flexbox, no Grid​
+​185.​ ​Main content must grow to fill all remaining space. Sidebars must have fixed width.​
+​ 86.​
+1
+​187.​
+​Below 600px: stack all three columns with main content first (use order property)​
+​Add min-height: 100vh on the outer wrapper so the footer is always pushed to the bottom -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Holy Grail Layout</title>
+        <link rel="stylesheet" href="holygrail.css" />
+    </head>
+    <body>
+        <div class="outter-wrapper">
+            <header>
+                <h1>Lorem</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Service</a></li>
+                </ul>
+            </header>
+            <div class="columns">
+                <div class="sidebar">
+                    <h2>Index</h2>
+                    <ul>
+                        <li>Topic 1</li>
+                        <li>Topic 2</li>
+                        <li>Topic 3</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <h1>Lorem, ipsum dolor.</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt, porro? At pariatur corporis quis odio perspiciatis
+                        inventore magni expedita! Et, eveniet. Neque tenetur sed
+                        sunt atque excepturi hic dolorem voluptatibus! Lorem,
+                        ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                        adipisci sunt dolor reiciendis culpa fugiat nostrum
+                        porro aspernatur non! Nesciunt assumenda accusantium eos
+                        dolorem reprehenderit doloremque nostrum facilis
+                        consequuntur cumque!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum sequi exercitationem aut! Voluptate quasi
+                        obcaecati, nulla modi consectetur rem nihil.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt, porro? At pariatur corporis quis odio perspiciatis
+                        inventore magni expedita! Et, eveniet. Neque tenetur sed
+                        sunt atque excepturi hic dolorem voluptatibus! Lorem,
+                        ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                        adipisci sunt dolor reiciendis culpa fugiat nostrum
+                        porro aspernatur non! Nesciunt assumenda accusantium eos
+                        dolorem reprehenderit doloremque nostrum facilis
+                        consequuntur cumque!
+                    </p>
+                </div>
+                <div class="right-aside">
+                    <aside>
+                        <h2>Lorem, aside.</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Quae, beatae.
+                        </p>
+                    </aside>
+                </div>
+            </div>
+            <footer>
+                <span>copyright&copy; 2026</span>
+            </footer>
+        </div>
+    </body>
+</html>

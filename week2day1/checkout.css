@@ -1,0 +1,80 @@
+.section {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+.input-holder {
+    margin-left: auto;
+    margin-right: 2em;
+    flex-grow: 1;
+}
+input {
+    width: 400px;
+    border: 1px solid black;
+}
+input:hover {
+    border: 1px solid black;
+}
+input:focus {
+    background-color: aliceblue;
+}
+input:user-invalid {
+    border: 1px solid red;
+}
+input:user-invalid + .error-message {
+    display: block;
+}
+label {
+    width: 180px;
+}
+#cvv-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.8em;
+}
+.buttons {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
+button {
+    margin-top: 2px;
+    border-radius: 0.5em;
+    border: 1px solid black;
+}
+button[type="submit"]{
+    background-color: green;
+    color: white;
+}
+button[type="submit"]:hover {
+    background-color: rgb(17, 99, 17);
+    color: white;
+}
+.cancel-btn:hover {
+    background-color: red;
+    color: white;
+}
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .section {
+        flex-direction: column;
+    }
+    input {
+        width: 250px;
+        border: 1px solid black;
+    }
+    .input-holder {
+        margin-left: 0;
+        margin-right: 2em;
+        flex-grow: 1;
+    }
+    .buttons {
+        margin-right: 4em;
+    }
+}

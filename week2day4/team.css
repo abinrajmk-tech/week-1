@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(102, 100, 100);
+}
+p {
+    padding: 5px;
+    text-align: center;
+}
+h2,
+h3 {
+    margin-top: 4px;
+    padding: 5px;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+footer {
+    background-color: aliceblue;
+}
+header {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 3px;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+main {
+    grid-template-columns: 1fr 1fr;
+}
+section {
+    box-shadow: 3px 3px whitesmoke;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
+    margin-bottom: 8px;
+    padding: 3em;
+}
+section div {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 100ms linear;
+    border-radius: 30px;
+}
+section div:hover {
+    box-shadow: 5px 5px rgb(211, 211, 211);
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    box-shadow: none;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+section div:hover .icons {
+    opacity: 1;
+    box-shadow: none;
+}
+
+.bi-instagram {
+    color: rgb(235, 43, 75);
+}
+.bi-linkedin {
+    color: rgb(97, 126, 195);
+}
+.bi-envelope-at-fill {
+    color: gray;
+}
+.bi-github {
+    color: black;
+}
+
+#management{
+    display: none;
+}
+#engineering{
+    display: none;
+}
+#management:target{
+    display: grid;
+}
+#engineering:target{
+    display: grid;
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    section {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    section {
+        grid-template-columns: 1fr;
+    }
+}

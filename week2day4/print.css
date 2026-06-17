@@ -1,0 +1,87 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    list-style-type: none;
+}
+.main-container {
+    display: flex;
+}
+.container {
+    margin: auto 4em;
+}
+.ads {
+    background-color: whitesmoke;
+    margin: 1em 0;
+}
+button:hover {
+    background: red;
+}
+
+.content {
+    transition: max-height 300ms linear;
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+input {
+    display: none;
+}
+#hidden-checkbox:checked + .content {
+    max-height: 300px;
+}
+.tab {
+    width: 0;
+    overflow: hidden;
+    transform: translateX(-300px);
+    transition: transform 300ms linear;
+}
+.tabs {
+    display: flex;
+    max-height: 50px;
+}
+#hidden-radio-1:checked + .tab {
+    width: 100vw;
+    transform: translateX(0px);
+}
+#hidden-radio-2:checked + .tab {
+    width: 100vw;
+    transform: translateX(0px);
+}
+
+@media print {
+    .tab,
+    .content {
+        height: auto;
+        width: auto;
+        transform: none;
+    }
+    .tabs {
+        max-height: none;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .ads,
+    button,
+    label {
+        display: none;
+    }
+    .header {
+        display: none;
+    }
+    a::after {
+        content: " (" attr(href) ")";
+    }
+    .container {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}

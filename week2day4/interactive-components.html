@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS-Only Interactive Components</title>
+        <link rel="stylesheet" href="interactive-components.css" />
+    </head>
+    <body>
+        <div class="container">
+            <label for="hidden-checkbox">Click here to view the content</label>
+            <input
+                type="checkbox"
+                name="hidden-checkbox"
+                id="hidden-checkbox"
+            />
+            <div class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, possimus! Voluptatibus, possimus! Voluptatibus,
+                possimus! Voluptatibus, possimus! Voluptatibus, possimus!
+            </div>
+        </div>
+        <div class="container">
+            <label for="hidden-radio-1">Tab-1</label>
+            <label for="hidden-radio-2">Tab-2</label>
+
+            <div class="tabs">
+                <input type="radio" id="hidden-radio-1" name="radio" />
+                <div class="tab">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus, possimus! Voluptatibus, possimus!
+                </div>
+                <input type="radio" id="hidden-radio-2" name="radio" />
+
+                <div class="tab">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus, possimus! Voluptatibus, possimus! Lorem ipsum
+                    dolor sit, amet consectetur adipisicing elit. Non, aliquid?
+                </div>
+            </div>
+        </div>
+
+        <div class="rating">
+            <input type="radio" name="star" id="star-1" />
+            <label for="star-1"></label>
+
+            <input type="radio" name="star" id="star-2" />
+            <label for="star-2"></label>
+
+            <input type="radio" name="star" id="star-3" />
+            <label for="star-3"></label>
+
+            <input type="radio" name="star" id="star-4" />
+            <label for="star-4"></label>
+
+            <input type="radio" name="star" id="star-5" />
+            <label for="star-5"></label>
+        </div>
+    </body>
+</html>

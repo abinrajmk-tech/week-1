@@ -1,0 +1,48 @@
+.content {
+    /* height: 10em; */
+    transition: max-height 300ms linear;
+    max-height: 0;
+    overflow: hidden;
+}
+input {
+    display: none;
+}
+#hidden-checkbox:checked + .content {
+    max-height: 300px;
+}
+.tab {
+    width: 0;
+    overflow: hidden;
+    transform: translateX(-300px);
+    transition: transform 300ms linear;
+}
+.tabs {
+    display: flex;
+    max-height: 50px;
+}
+.rating {
+    /* margin-left: 1em; */
+    max-width: 300px;
+    transform: rotate(180deg);
+}
+.rating label {
+    font-size: 2em;
+}
+
+#hidden-radio-1:checked + .tab {
+    width: 100vw;
+    transform: translateX(0px);
+}
+#hidden-radio-2:checked + .tab {
+    width: 100vw;
+    transform: translateX(0px);
+}
+
+input[type="radio"] ~ label::before {
+    content: "\2605";
+    color: rgb(181, 181, 181);
+}
+input[type="radio"]:checked ~ label::before {
+    content: "\2605";
+    color: rgb(153, 133, 51);
+}

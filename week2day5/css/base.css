@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: grey;
+    --color-secondary: rgb(1, 21, 53);
+    --color-text: #333;
+    --color-captions: white;
+    --color-button-text: #0562d2;
+    --color-bg: rgb(255, 255, 255);
+    --bg-footer: whitesmoke;
+}
+:root[data-theme="dark"] {
+    --color-bg: rgb(36, 35, 35);
+    --color-text: white;
+    --bg-footer: black;
+    --color-button-text: whitesmoke;
+}

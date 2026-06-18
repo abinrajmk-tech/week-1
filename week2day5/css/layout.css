@@ -1,0 +1,29 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-footer);
+    width: 100%;
+    /* margin-top: 100%; */
+    height: 200px;
+}
+header {
+    margin-top: 4em;
+    margin-right: 18em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
+    background-color: var(--color-bg);
+}
+.section{
+    margin-block: 5rem;
+}
+.page-container{
+    width: min(1200px,90%);
+    margin-inline: auto;
+    padding-block: 4rem;
+}

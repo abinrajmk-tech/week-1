@@ -5,6 +5,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 :root {
@@ -21,4 +23,41 @@
     --color-text: white;
     --bg-footer: black;
     --color-button-text: whitesmoke;
+}
+
+/* home */
+body {
+    font-family: "Roboto";
+    overflow-x: hidden;
+    background-color: var(--color-bg);
+    min-height: 80vh;
+    color: var(--color-text);
+}
+main{
+
+    min-height: 90vh;
+    
+}
+h1{
+    font-size: 32px;
+}
+header h1 {
+    margin-left: 8em;
+}
+h2{
+    font-size: 24px;
+}
+p{
+    font-size: 16px;
+}
+body a {
+    color: var(--color-text);
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-bg: rgb(36, 35, 35);
+        --color-text: white;
+        --bg-footer: black;
+        --color-button-text: whitesmoke;
+    }
 }

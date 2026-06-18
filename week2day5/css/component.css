@@ -1,0 +1,124 @@
+header .theme-btn {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    text-align: center;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-footer);
+    width: 100%;
+    /* margin-top: 100%; */
+    height: 200px;
+}
+header {
+    margin-top: 4em;
+    margin-right: 18em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
+    background-color: var(--color-bg);
+}
+
+header h1 {
+    margin-left: 8em;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.column-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 2%;
+}
+.feedback-container blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.feedback-container blockquote p {
+    font-size: 22px;
+}
+.feedback-container blockquote cite {
+    font-size: 19px;
+    font-weight: 500;
+    align-self: flex-end;
+}
+
+.mx-18 {
+    margin-right: 18em;
+    margin-left: 18em;
+}
+.mb-3 {
+    margin-bottom: 3em;
+}
+.mb-02 {
+    margin-bottom: 0.3em;
+}
+.w-70v {
+    width: 70vw;
+}
+.h-500 {
+    height: 500px;
+}
+.b-2 {
+    border: 2px solid black;
+}
+.mt-3 {
+    margin-top: 3em;
+}
+.flex {
+    display: flex;
+}
+
+.centre {
+    justify-content: center;
+    align-items: center;
+}
+
+.end {
+    justify-content: center;
+    align-items: end;
+}
+
+.mr-2 {
+    margin-right: 2em;
+}
+.gap-2 {
+    gap: 2em;
+}
+
+.font-400 {
+    font-weight: 400;
+}
+.font-2xl {
+    font-size: 5em;
+}
+.font-lg {
+    font-size: 1.2em;
+}
+.space-bw {
+    justify-content: space-between;
+}

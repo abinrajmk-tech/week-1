@@ -439,3 +439,253 @@ tr:nth-child(2n) {
         gap: 2em;
     }
 }
+
+/* team page  */
+h2,
+h3 {
+    margin-top: 4px;
+    padding: 5px;
+}
+.main-container-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.filter {
+    text-align: center;
+}
+.filter a:hover {
+    background-color: wheat;
+}
+.filter a:focus {
+    background-color: wheat;
+}
+.team-main h2 {
+    text-align: center;
+}
+.team-main section {
+    box-shadow: 3px 3px whitesmoke;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
+    margin-bottom: 8px;
+    padding: 3em;
+}
+.team-main section div {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 100ms linear;
+    border-radius: 30px;
+}
+.team-main section div:hover {
+    box-shadow: 5px 5px rgb(211, 211, 211);
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team-main section .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    box-shadow: none;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+.team-main section div:hover .social-icons {
+    opacity: 1;
+    box-shadow: none;
+}
+
+.bi-instagram {
+    color: rgb(235, 43, 75);
+}
+.bi-linkedin {
+    color: rgb(97, 126, 195);
+}
+.bi-envelope-at-fill {
+    color: gray;
+}
+.bi-github {
+    color: black;
+}
+
+#management {
+    display: none;
+}
+#engineering {
+    display: none;
+}
+#management:target {
+    display: grid;
+}
+#engineering:target {
+    display: grid;
+}
+.filter a {
+    margin: 3rem;
+    padding: 1em;
+    background-color: whitesmoke;
+    border-radius: 1em;
+}
+.filter a:focus {
+    border: 5px solid var(--color-button-text);
+}
+
+@media screen and (max-width: 1024px) {
+    .team-main section {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .team-main section {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+    }
+    .filter {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+    .filter a {
+        margin: 1rem;
+        padding: 0.4em;
+        font-size: 1rem;
+        background-color: whitesmoke;
+        border-radius: 1em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .team-main section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* contact page  */
+.contact-main {
+    margin-inline: auto;
+    width: min(1200px, 90%);
+}
+
+.contact-main .column-container {
+    width: 100%;
+    margin-top: 2em;
+    justify-content: center;
+}
+.column-container form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* box-shadow: 2px 2px solid whitesmoke; */
+    border-radius: 2em;
+}
+.column-container form fieldset {
+    min-width: 360px;
+    max-width: 480px;
+    border: none;
+    border-radius: 1em;
+    padding-left: 2em;
+    background-color: aliceblue;
+    /* border-left: 1px solid var(--color-button-text); */
+    /* box-shadow: 2px 2px var(--color-button-text); */
+}
+.column-container form fieldset div {
+    min-width: 80%;
+    display: flex;
+    gap: 30px;
+    margin: 2em;
+}
+.column-container form label {
+    width: 100%
+}
+.column-container form input,
+textarea {
+    width: 100%;
+    padding: 1em;
+    flex-grow: 1;
+    height: 40px;
+    margin-right: auto;
+    border: none;
+    border-radius: 1em;
+    box-shadow: 4px 4px rgb(224, 224, 224);
+}
+.column-container form input[type="checkbox"] {
+    border: none;
+    box-shadow: none;
+}
+.floating-label {
+    position: relative;
+    width: 80%;
+}
+.floating-label label {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    color: #00000099;
+    transform: translateY(-50%);
+    transition: all transform 1s linear;
+}
+.floating-label input:focus + label,
+.floating-label .input-text:not(:placeholder-shown) + label {
+    top: 0;
+    left: 0.8em;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+.floating-label input:valid + label {
+    top: -30%;
+    color: green;
+}
+.floating-label textarea:user-valid + label {
+    color: transparent;
+}
+.floating-label input:user-invalid + label {
+    top: -30%;
+    color: red;
+}
+.floating-label input:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid #9999;
+}
+iframe {
+    width: 90%;
+    border-radius: 50px;
+}
+address {
+    text-align: center;
+}
+.custom-label{
+    width: 100%;
+    height: 100%;
+    margin-top: 3em;
+}
+.custom-label::before{
+    content: "";
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+   
+}
+#news_letter{
+    appearance: none;;
+}
+#news_letter:checked ~ .custom-label::before {
+    
+    background-color: var(--color-button-text)
+
+}

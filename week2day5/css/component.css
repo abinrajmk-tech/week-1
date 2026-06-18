@@ -80,3 +80,11 @@ header h1 {
     padding: 2%;
     width: 150px;
 }
+
+iframe{
+    width: 90%;
+    border-radius: 50px;
+}
+address{
+    text-align: center;
+}

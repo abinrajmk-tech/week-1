@@ -362,7 +362,7 @@
 article,
 .call-to-action-text,
 .call-to-action-form {
-    background-color: white;
+    background-color: var(--color-bg);
     transition: box-shadow 1ms;
     box-shadow: 1px 2px rgb(212, 212, 212);
     border-radius: 2rem;
@@ -378,6 +378,7 @@ table:hover {
     grid-template-columns: 2fr 2fr;
     gap: 2em;
     margin-bottom: 2rem;
+    background: var(--color-bg);
 }
 .call-to-action-form,
 .call-to-action-text {
@@ -385,7 +386,7 @@ table:hover {
     flex-direction: column;
     gap: 1em;
     padding: 5% 10%;
-    background-color: var(--color-bg-100);
+    background-color: var(--color-bg);
 }
 
 .call-to-action-form input {
@@ -408,7 +409,7 @@ td {
     border-left: 2px solid black;
 }
 tr:nth-child(2n) {
-    background-color: whitesmoke;
+    background-color: var(--color-bg-400);
 }
 .featured {
     background-color: rgb(250, 226, 226);
@@ -535,7 +536,6 @@ figure {
 .filter a {
     margin: 3rem;
     padding: 1em;
-    background-color: whitesmoke;
     border-radius: 1em;
 }
 .filter a:focus {
@@ -607,7 +607,7 @@ figure {
     margin: 2em;
 }
 .column-container form label {
-    width: 100%
+    width: 100%;
 }
 .column-container form input,
 textarea {
@@ -666,12 +666,12 @@ iframe {
 address {
     text-align: center;
 }
-.custom-label{
+.custom-label {
     width: 100%;
     height: 100%;
     margin-top: 3em;
 }
-.custom-label::before{
+.custom-label::before {
     content: "";
     height: 12px;
     width: 12px;
@@ -679,13 +679,10 @@ address {
     margin-right: 10px;
     border: 1px solid black;
     border-radius: 50%;
-   
 }
-#news_letter{
-    appearance: none;;
+#news_letter {
+    appearance: none;
 }
 #news_letter:checked ~ .custom-label::before {
-    
-    background-color: var(--color-button-text)
-
+    background-color: var(--color-button-text);
 }

@@ -1,3 +1,15 @@
+
+// Open the browser console. Before running each, predict: typeof null, typeof [], typeof {}, typeof​
+// ​ aN, typeof function(){}, 0 == false, '' == false, null == undefined, null === undefined, NaN === NaN,​
+// N
+// ​1 + '2', '3' - 1, true + true, [] + [], [] + {}
+// ​ 98.​
+// 2
+// ​299.​
+// ​For every wrong prediction, write a one-sentence explanation of why JS behaves that way​
+// ​Create types.js and log the typeof of one value for each primitive type plus object and function​
+
+
 console.log(typeof(null))
 // prediction : object 
 

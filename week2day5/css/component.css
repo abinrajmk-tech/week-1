@@ -28,8 +28,18 @@ header {
     width: 100%;
     border-bottom: 10px solid var(--color-bg-400);
     background-color: var(--color-bg-300);
+    animation: 1s page-entry;
 }
-
+@keyframes page-entry {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
 header h1 {
     margin-left: 8em;
 }
@@ -80,4 +90,9 @@ header h1 {
     padding: 2%;
     width: 150px;
 }
-
+.current {
+    text-decoration: underline rgb(199, 0, 0) solid 2px;
+}
+button:hover {
+    outline: rgb(187, 10, 10);
+}

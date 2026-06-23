@@ -1,0 +1,306 @@
+<!-- ​276.​
+​Home: header with sticky nav, full-viewport hero with gradient overlay, three-column features​
+​grid (Grid), testimonials row (Flexbox), styled footer
+​277.​
+​About: timeline section using dl styled as a vertical timeline, mission quote styled as a large​
+​pull-quote, values cards using Grid​
+​278.​ ​Both: responsive at 768px and 480px. Lighthouse Performance 70+. Accessibility 90+.​
+​279.​
+​Commit each page as you complete it​ -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Home Page" />
+        <meta name="keywords" content="HTML ,CSS , JAVASCRIPT" />
+        <meta name="author" content="Abin Raj" />
+        <link rel="canonical" href="http://127.0.0.1:5500/day4/home.html" />
+        <meta property="og:title" content="Home page ford" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="http://127.0.0.1:5500/day4/home.html"
+        />
+        <meta
+            property="og:image"
+            content="https://picsum.photos/id/237/100/100"
+        />
+        <meta property="og:description" content="Home Page" />
+        <meta property="og:site_name" content="Project Main" />
+        <meta name="twiter:card" content="summary_large_image" />
+        <meta name="twiter:title" content="Home" />
+        <meta name="twiter:description" content="landing page" />
+        <meta
+            name="twiter:image"
+            content="https://picsum.photos/id/237/100/100"
+        />
+        <meta name="theme-color" content="red" />
+
+        <link rel="stylesheet" href="./css/main.css" />
+        <script src="dark-mode.js" defer></script>
+        <script src="nav.js" defer></script>
+        <title>Home Page</title>
+    </head>
+    <body class="home-body">
+        <header>
+            <button class="hamburger">
+                <svg
+                    width="30px"
+                    height="30px"
+                    viewBox="0 0 32 32"
+                    enable-background="new 0 0 32 32"
+                    id="Editable-line"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    fill="#682c2c"
+                    stroke="#682c2c"
+                >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <line
+                            fill="none"
+                            id="XMLID_103_"
+                            stroke="#a3a3a3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            x1="7"
+                            x2="25"
+                            y1="16"
+                            y2="16"
+                        ></line>
+                        <line
+                            fill="none"
+                            id="XMLID_102_"
+                            stroke="#a3a3a3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            x1="7"
+                            x2="25"
+                            y1="25"
+                            y2="25"
+                        ></line>
+                        <line
+                            fill="none"
+                            id="XMLID_101_"
+                            stroke="#a3a3a3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                            x1="7"
+                            x2="25"
+                            y1="7"
+                            y2="7"
+                        ></line>
+                    </g>
+                </svg>
+            </button>
+            <h1>Ford Corporate</h1>
+
+            <nav class="navigation">
+                <ul class="nav-ul">
+                    <li aria-current="page">
+                        <p><a class="current" href="./home.html">Home</a></p>
+                    </li>
+                    <li>
+                        <p><a href="./services.html">Services</a></p>
+                    </li>
+                    <li></li>
+                    <li>
+                        <p><a href="./about.html">About</a></p>
+                    </li>
+                    <li>
+                        <p><a href="./team.html">Team</a></p>
+                    </li>
+                    <li>
+                        <p><a href="./contact.html">Contact</a></p>
+                    </li>
+                </ul>
+            </nav>
+            <button
+                title="theme toggle button"
+                aria-pressed="false"
+                class="theme-btn"
+            >
+                <svg
+                    width="64px"
+                    height="64px"
+                    viewBox="-17.76 -17.76 83.52 83.52"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M23.9922 38.4651C24.6394 38.4651 25.1717 38.957 25.2358 39.5873L25.2422 39.7151V42.7527C25.2422 43.443 24.6826 44.0027 23.9922 44.0027C23.345 44.0027 22.8127 43.5108 22.7487 42.8805L22.7422 42.7527V39.7151C22.7422 39.0248 23.3019 38.4651 23.9922 38.4651ZM35.8947 34.0978L35.9962 34.1889L38.1441 36.3368C38.6322 36.8249 38.6322 37.6164 38.1441 38.1046C37.6884 38.5602 36.9686 38.5905 36.4778 38.1957L36.3763 38.1046L34.2284 35.9567C33.7403 35.4685 33.7403 34.6771 34.2284 34.1889C34.684 33.7333 35.4039 33.7029 35.8947 34.0978ZM13.755 34.1889C14.2106 34.6445 14.241 35.3644 13.8461 35.8552L13.755 35.9567L11.6071 38.1046C11.119 38.5927 10.3275 38.5927 9.83937 38.1046C9.38376 37.6489 9.35339 36.9291 9.74825 36.4383L9.83937 36.3368L11.9872 34.1889C12.4754 33.7008 13.2668 33.7008 13.755 34.1889ZM23.9999 13.0805C30.0306 13.0805 34.9194 17.9693 34.9194 24C34.9194 30.0306 30.0306 34.9194 23.9999 34.9194C17.9693 34.9194 13.0805 30.0306 13.0805 24C13.0805 17.9693 17.9693 13.0805 23.9999 13.0805ZM23.9999 15.5805C19.35 15.5805 15.5805 19.3501 15.5805 24C15.5805 28.6499 19.35 32.4194 23.9999 32.4194C28.6499 32.4194 32.4194 28.6499 32.4194 24C32.4194 19.3501 28.6499 15.5805 23.9999 15.5805ZM42.7308 22.787C43.4212 22.787 43.9808 23.3467 43.9808 24.037C43.9808 24.6842 43.489 25.2166 42.8586 25.2806L42.7308 25.287H39.6933C39.0029 25.287 38.4433 24.7274 38.4433 24.037C38.4433 23.3898 38.9352 22.8575 39.5655 22.7935L39.6933 22.787H42.7308ZM8.30657 22.7287C8.99692 22.7287 9.55657 23.2884 9.55657 23.9787C9.55657 24.6259 9.06469 25.1582 8.43437 25.2223L8.30657 25.2287H5.26904C4.57869 25.2287 4.01904 24.6691 4.01904 23.9787C4.01904 23.3315 4.51092 22.7992 5.14124 22.7352L5.26904 22.7287H8.30657ZM11.5056 9.8043L11.6071 9.89542L13.755 12.0433C14.2432 12.5314 14.2432 13.3229 13.755 13.811C13.2994 14.2667 12.5796 14.297 12.0887 13.9022L11.9872 13.811L9.83937 11.6632C9.35122 11.175 9.35122 10.3836 9.83937 9.89542C10.295 9.43981 11.0148 9.40943 11.5056 9.8043ZM38.1441 9.89542C38.5997 10.351 38.63 11.0709 38.2352 11.5617L38.1441 11.6632L35.9962 13.811C35.508 14.2992 34.7166 14.2992 34.2284 13.811C33.7728 13.3554 33.7425 12.6356 34.1373 12.1448L34.2284 12.0433L36.3763 9.89542C36.8644 9.40727 37.6559 9.40727 38.1441 9.89542ZM24.0004 3.99731C24.6476 3.99731 25.18 4.48919 25.244 5.11951L25.2504 5.24731V8.28484C25.2504 8.97519 24.6908 9.53484 24.0004 9.53484C23.3532 9.53484 22.8209 9.04296 22.7569 8.41264L22.7504 8.28484V5.24731C22.7504 4.55696 23.3101 3.99731 24.0004 3.99731Z"
+                        ></path>
+                    </g>
+                </svg>
+            </button>
+        </header>
+        <main>
+            <div class="sidebar-nav" aria-expanded="false">
+                <nav class="sidebar-navigation">
+                    <ul class="side-nav-ul">
+                        <li aria-current="page">
+                            <p>
+                                <a class="current" href="./home.html">Home</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p><a href="./services.html">Services</a></p>
+                        </li>
+                        <li></li>
+                        <li>
+                            <p><a href="./about.html">About</a></p>
+                        </li>
+                        <li>
+                            <p><a href="./team.html">Team</a></p>
+                        </li>
+                        <li>
+                            <p><a href="./contact.html">Contact</a></p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero">
+                <!-- <img fetchpriority='high' loading='lazy'  class="hero-image"
+                    src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:280a385f-ec2c-4f73-8055-6e0a5a766b91/as/EricMattJuly10_v2.webp?max-quality=75&crop-names=1_21x9&width=3840"
+                    alt=""
+                /> -->
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Welcome To A New Era of Ford</h1>
+
+                    <p>
+                        At Ford , We belive in putting passion to work.For over
+                        120 years,Ford has shown up for our customers and
+                        communities with a unique blend of grit, optimism and
+                        resilience ,consistently keeping an eye on the future.
+                        As Ford enters a new era ,our commitment to enabling our
+                        customers to pursue their passion will remain at the
+                        forefront of everything we do.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="features">
+                        <div class="feature-card">
+                            <div class="card-container">
+                                <img
+                                    fetchpriority="high"
+                                    loading="lazy"
+                                    src="images/card-1.webP"
+                                    alt="an office with few peoples"
+                                />
+                                <div class="home-content">
+                                    <h2>Career</h2>
+                                    <p>
+                                        We&apos;re looking for talent that wants
+                                        to take us somewhere new.
+                                    </p>
+                                    <a href="#">Join Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-card" id="investors">
+                            <div class="card-container">
+                                <img
+                                    fetchpriority="high"
+                                    loading="lazy"
+                                    src="./images/card-2.webP"
+                                    alt=""
+                                />
+                                <div class="home-content">
+                                    <h2>Investors</h2>
+                                    <p>
+                                        Learn more about our latest news,
+                                        events, financials.
+                                    </p>
+                                    <a href="#">Dive into Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-details">
+                        <h2>From the Road</h2>
+                        <p>Learn what's new with Ford.</p>
+                        <img
+                            fetchpriority="high"
+                            loading="lazy"
+                            src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:1d43df11-2d70-43a8-ab2c-f88ed816894d/as/FordPerformanceSeasonLaunch_Jim_Farley_03.webp?max-quality=75&crop-names=1_16x7&width=1920"
+                            alt=""
+                        />
+                        <p><a href="#">Get More Details.</a></p>
+                    </div>
+                    <div class="leader-card">
+                        <div class="teaser">
+                            <img
+                                fetchpriority="high"
+                                loading="lazy"
+                                src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:7e0525c4-891a-4be3-9657-82082a91298c/as/bill-ford.webp?max-quality=75&crop-names=1_3x2&width=1920"
+                                alt=""
+                            />
+                        </div>
+                        <div class="leader-content">
+                            <blockquote>
+                                <p>
+                                    &apos; I believe the distinction between a
+                                    good company and a great one is this: A good
+                                    company delivers excellent products and
+                                    services; a great one delivers excellent
+                                    products and services and strives to make
+                                    the world a better place.&apos;
+                                </p>
+                                <cite>Bill Ford</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Feedbacks</h3>
+                    <div class="feedback-container">
+                        <blockquote>
+                            <p>
+                                &apos; Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Doloribus,
+                                mollitia.&apos;
+                            </p>
+                            <cite>Jon Doe</cite>
+                        </blockquote>
+                        <blockquote>
+                            <p>
+                                &apos; Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Distinctio, in
+                                cupiditate?&apos;
+                            </p>
+                            <cite>Harry Kane</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="home-footer">
+            <p>Copyright &copy;2026</p>
+        </footer>
+    </body>
+</html>

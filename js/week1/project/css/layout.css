@@ -16,8 +16,9 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    border-bottom: 2px solid whitesmoke;
-    background-color: var(--color-bg);
+    border-bottom: 10px solid var(--color-bg-400);
+    background-color: var(--color-bg-300);
+    animation: 1s page-entry;
 }
 
 .section {
@@ -41,4 +42,37 @@ header {
     min-height: 110vh;
     margin-inline: auto;
     width: min(1200px, 90%);
+}
+.sidebar-nav {
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 64px;
+    width: 200px;
+    background-color: var(--color-bg);
+}
+.sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px;
+}
+.side-nav-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    header {
+        margin-top: 0em;
+        margin-right: 0em;
+        flex-direction: row;
+    }
 }

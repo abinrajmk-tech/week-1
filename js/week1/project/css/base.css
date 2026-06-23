@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-primary: grey;
+    --color-secondary: rgb(1 21 53);
+    --color-text: #333;
+    --color-captions: white;
+    --color-button-text: #0562d2;
+    --color-bg: rgb(255 255 255);
+    --color-bg-100: rgb(246 246 246);
+    --color-bg-200: rgb(236 236 236);
+    --color-bg-300: rgb(225 225 225);
+    --color-bg-400: rgb(208 208 208);
+    --bg-footer: whitesmoke;
+}
+
+:root[data-theme="dark"] {
+    --color-bg: rgb(36 35 35);
+    --color-bg-100: rgb(77 77 77);
+    --color-bg-200: rgb(60 60 60);
+    --color-bg-300: rgb(30 30 30);
+    --color-bg-400: rgb(17 17 17);
+    --color-text: white;
+    --bg-footer: black;
+    --color-button-text: whitesmoke;
+}
+
+/* home */
+body {
+    font-family: Roboto, sans-serif;
+    overflow-x: hidden;
+    background-color: var(--color-bg);
+    min-height: 80vh;
+    color: var(--color-text);
+}
+
+main {
+    min-height: 90vh;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+header h1 {
+    margin-left: 8em;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+body a {
+    color: var(--color-text);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-bg: rgb(36 35 35);
+        --color-text: white;
+        --bg-footer: black;
+        --color-button-text: whitesmoke;
+    }
+}

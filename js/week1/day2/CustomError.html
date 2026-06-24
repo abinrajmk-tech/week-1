@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Custom Errors & Global Handlers</title>
+        <style>
+            .overlay {
+                display: none;
+                flex-direction: column;
+                height: auto;
+                border: 2px solid black;
+            }
+            .error-msg {
+                height: 400px;
+                color: red;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 80%;
+            }
+        </style>
+        <script src="CustomError.js" defer></script>
+    </head>
+    <body>
+        <div class="overlay">
+            <div class="error-msg"></div>
+            <div class="error-msg-2"></div>
+        </div>
+        <button onclick="buttonClickFunction()">Error</button>
+    </body>
+</html>

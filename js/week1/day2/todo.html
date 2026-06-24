@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dynamic To-Do List</title>
+    </head>
+    <style>
+        .add-button {
+            width: 30px;
+            height: 20px;
+            color: green;
+            border: 2px solid green;
+        }
+        li {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        li button {
+            width: 30px;
+            height: 20px;
+            color: red;
+            border: 2px solid red;
+        }
+        p {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script src="./todo.js" defer></script>
+    <body>
+        <ul>
+            <button class="add-button" data-action="add">+</button>
+            <li>
+                <input type="checkbox" />
+                <p contenteditable="true">task 1</p>
+                <button data-action="remove">-</button>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <p contenteditable="true">task 2</p>
+                <button data-action="remove">-</button>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <p contenteditable="true">task 3</p>
+                <button data-action="remove">-</button>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <p contenteditable="true">task 4</p>
+                <button data-action="remove">-</button>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!-- ​329.​​Three-level nested div. Add click listeners in both bubble and capture phases on all three​
+​levels. Log phase name and element
+​330.​ ​Demonstrate stopPropagation() - click the child, outer listeners should not fire
+​331.​Demonstrate stopImmediatePropagation() - two listeners on same element, stop second
+​332.​​Show preventDefault() on a form submit and on an anchor click
+​ -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bubbling Capturing and stopPropagation</title>
+        <style>
+            .level-3 {
+                padding: 1em;
+                margin: 2em;
+                border: 2px solid black;
+                width: 50%;
+            }
+            .level-2 {
+                margin: 2em;
+                padding: 1em;
+                border: 1px solid black;
+            }
+            .level-1 {
+                margin: 2em;
+                padding: 1em;
+                border: 1px solid black;
+            }
+        </style>
+        <script src="task1.js" defer></script>
+    </head>
+    <body>
+        <div class="box-1">
+            <div class="level-3">
+                <div class="level-2">
+                    <div class="level-1"></div>
+                </div>
+            </div>
+        </div>
+        <button class="alert-button">Alert</button>
+        <form action="">
+            <input type="text" name="name" id="name" />
+            <label for="name">name</label>
+            <button type="submit">submit</button>
+            <a href="http://">Terms and Conditions</a>
+        </form>
+    </body>
+</html>

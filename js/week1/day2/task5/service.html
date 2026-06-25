@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -14,6 +13,19 @@
         />
         <title>Services</title>
         <link rel="stylesheet" href="./css/main.css" />
+        <style>
+            .hide {
+                display: none;
+                opacity: 0;
+            }
+            span {
+                background-color: yellow;
+            }
+            #not-found {
+                color: red;
+            }
+        </style>
+        <script src="search.js" defer></script>
         <script src="dark-mode.js" defer></script>
         <script src="nav.js" defer></script>
     </head>
@@ -157,10 +169,13 @@
                         </ul>
                     </nav>
                 </div>
+                <input type="search" name="searchbar" id="searchbar" />
+                <p id="not-found" class="hide">Result not found</p>
+
                 <section class="service-section">
                     <h2>Our Services</h2>
                     <div class="service-container">
-                        <article>
+                        <article class="article-1">
                             <h2>Ford App</h2>
                             <p>
                                 The Ford app is everything you need to elevate
@@ -184,7 +199,7 @@
                                 </li>
                             </ul>
                         </article>
-                        <article>
+                        <article class="article-2">
                             <h2>vehicle</h2>
                             <p>
                                 Get Ford experts to service your car wherever
@@ -199,7 +214,7 @@
                                 <li>Owner&apos;s Manual</li>
                             </ul>
                         </article>
-                        <article>
+                        <article class="article-3">
                             <h2>Other Resources</h2>
                             <p>
                                 Every new Ford vehicle comes with a New Vehicle

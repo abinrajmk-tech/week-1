@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Interactive Components</title>
+        <style>
+            .content {
+                transition: max-height 300ms linear;
+                height: 0px;
+                overflow: hidden;
+            }
+            .content-height {
+                height: 300px;
+            }
+            .tab {
+                width: 0;
+                overflow: hidden;
+                transform: translateX(-300px);
+                transition: transform 300ms linear;
+            }
+            .tabs {
+                display: flex;
+                max-height: 50px;
+            }
+            .tab-visible {
+                width: 100vw;
+                transform: translateX(0px);
+            }
+            .rating {
+                max-width: 300px;
+            }
+            .rating button {
+                font-size: 2em;
+                border: none;
+                background: none;
+                color: rgb(222, 176, 60);
+            }
+        </style>
+        <script src="interactive-components.js" defer></script>
+    </head>
+    <body>
+        <div class="top-container">
+            <button
+                onclick="viewContent()"
+                aria-expanded="false"
+                id="content-btn"
+            >
+                Click here to view the content
+            </button>
+            <div class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, possimus! Voluptatibus, possimus! Voluptatibus,
+                possimus! Voluptatibus, possimus! Voluptatibus, possimus!
+            </div>
+            <button
+                aria-expanded="false"
+                onclick="makeTabVisible(event)"
+                id="tab-btn1"
+            >
+                Tab-1
+            </button>
+            <button
+                aria-expanded="false"
+                onclick="makeTabVisible(event)"
+                id="tab-btn2"
+            >
+                Tab-2
+            </button>
+            <div class="tabs">
+                <div class="tab" id="tab-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus, possimus! Voluptatibus, possimus!
+                </div>
+                <div class="tab" id="tab-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptatibus, possimus! Voluptatibus, possimus! Lorem ipsum
+                    dolor sit, amet consectetur adipisicing elit. Non, aliquid?
+                </div>
+            </div>
+        </div>
+
+        <div class="rating">
+            <button aria-expanded="false">&#9734;</button>
+            <button aria-expanded="false">&#9734;</button>
+            <button aria-expanded="false">&#9734;</button>
+            <button aria-expanded="false">&#9734;</button>
+            <button aria-expanded="false">&#9734;</button>
+        </div>
+    </body>
+</html>

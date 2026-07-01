@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>application</title>
+        <script src="./application.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>application form</h1>
+        </header>
+
+        <main>
+            <div>
+                <ol>
+                    <li aria-current="step">Step 1</li>
+                    <li>Step 2</li>
+                    <li>Step 3</li>
+                </ol>
+            </div>
+            <form novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div>
+                        <label for="name">Full Name</label>
+                        <p>
+                            <input type="text" id="name" name="name" required />
+                            <span class="error-msg"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <label for="email">email</label>
+                        <p>
+                            <input
+                                type="email"
+                                id="email"
+                                required
+                                name="email"
+                            />
+                            <span class="error-msg"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <label for="phone">phone number</label>
+                        <p>
+                            <input
+                                type="tel"
+                                required
+                                name="phone"
+                                id="phone"
+                            />
+
+                            <span class="error-msg"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <label for="linkedin">linkedin url</label>
+                        <p>
+                            <input
+                                type="url"
+                                required
+                                name="linkedin"
+                                id="linkedin"
+                                class="lin"
+                            />
+                            <span class="error-msg"></span>
+                        </p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <div>
+                        <label for="role">current role</label>
+                        <p>
+                            <input type="text" name="role" id="role" />
+                            <span class="error-msg"></span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <label for="experience">Experience</label>
+                        <p>
+                            <input
+                                type="number"
+                                name="experience"
+                                id="experience"
+                                required
+                            />
+                            <span class="error-msg"></span>
+                        </p>
+                    </div>
+                </fieldset>
+                <button type="submit">submit</button>
+            </form>
+        </main>
+    </body>
+</html>

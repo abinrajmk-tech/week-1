@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image LightBox</title>
+        <style>
+            .container {
+                max-width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .overlay {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                height: 100vh;
+                width: 100%;
+                place-content: center;
+                transform: translate(-50%, -50%);
+                backdrop-filter: blur(10px);
+                z-index: 10;
+                align-items: center;
+            }
+            .overlay img {
+                aspect-ratio: 1;
+                height: 80%;
+            }
+            button {
+                background-color: transparent;
+                border: none;
+                color: rgb(0, 0, 0);
+                border: 1px solid black;
+                font-size: 36px;
+                outline: 0;
+
+                z-index: 20;
+            }
+            button:focus {
+                outline: 2px solid rgb(255, 0, 0);
+            }
+            #left {
+                position: fixed;
+                top: 50%;
+                left: 10%;
+            }
+            #right {
+                position: fixed;
+                top: 50%;
+                right: 10%;
+            }
+            #close {
+                position: fixed;
+                top: 10%;
+                right: 10%;
+            }
+        </style>
+        <script src="js/components/gallery.js" defer type="module"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Image Gallery</h1>
+        </header>
+        <div class="container">
+            <div class="images">
+                <img
+                    src="https://picsum.photos/id/702/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <img
+                    src="https://picsum.photos/id/703/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <img
+                    src="https://picsum.photos/id/704/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <img
+                    src="https://picsum.photos/id/705/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <img
+                    src="https://picsum.photos/id/700/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <img
+                    src="https://picsum.photos/id/701/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+        </div>
+        <div class="overlay">
+            <button id="close">X</button>
+            <button id="left" onclick="prev(event)">&lt;</button>
+            <button id="right" onclick="next(event)">&gt;</button>
+        </div>
+    </body>
+</html>

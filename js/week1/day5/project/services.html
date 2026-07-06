@@ -24,12 +24,54 @@
             #not-found {
                 color: red;
             }
+            .content {
+                transition: max-height 300ms linear;
+                height: 0px;
+                overflow: hidden;
+            }
+            .content-height {
+                height: 300px;
+            }
+            .tab {
+                width: 0;
+                overflow: hidden;
+                transform: translateX(-300px);
+                transition: transform 300ms linear;
+            }
+            .tabs {
+                display: flex;
+                max-height: 50px;
+            }
+            .tab-visible {
+                width: 100vw;
+                transform: translateX(0px);
+            }
+            .rating {
+                max-width: 300px;
+            }
+            .rating button {
+                font-size: 2em;
+                border: none;
+                background: none;
+                color: rgb(222, 176, 60);
+            }
         </style>
         <script src="js/components/search.js" defer type="module"></script>
         <script src="js/components/dark-mode.js" defer type="module"></script>
         <script src="js/components/nav.js" defer type="module"></script>
+        <script src="js/components/accordion.js" defer type="module"></script>
+        <script
+            src="js/components/scrollanimation.js"
+            defer
+            type="module"
+        ></script>
+        <script src="js/components/focusTrap.js" defer type="module"></script>
     </head>
     <body>
+        <div class="scroller"></div>
+        <div class="scrollup-btn">
+            <button>scrollup</button>
+        </div>
         <header>
             <button class="hamburger">
                 <svg
@@ -364,8 +406,40 @@
                         </tbody>
                     </table>
                 </section>
+                <div class="top-container" style="margin-top: 1em">
+                    <h3>FAQ</h3>
+                    <button aria-expanded="false" id="content-btn">
+                        Most demanding service ?
+                    </button>
+                    <div class="content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Voluptatibus, possimus! Voluptatibus, possimus!
+                        Voluptatibus, possimus! Voluptatibus, possimus!
+                        Voluptatibus, possimus!
+                    </div>
+                    <button aria-expanded="false" id="tab-btn1">
+                        How to reach us ?
+                    </button>
+                    <button aria-expanded="false" id="tab-btn2">
+                        How to get 24 x 7 support ?
+                    </button>
+                    <div class="tabs">
+                        <div class="tab" id="tab-1">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Voluptatibus, possimus! Voluptatibus,
+                            possimus!
+                        </div>
+                        <div class="tab" id="tab-2">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Voluptatibus, possimus! Voluptatibus,
+                            possimus! Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Non, aliquid?
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
+
         <footer class="home-footer">
             <p>Copyright &copy;2026</p>
         </footer>

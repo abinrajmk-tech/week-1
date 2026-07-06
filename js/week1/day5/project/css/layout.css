@@ -76,3 +76,8 @@ header {
         flex-direction: row;
     }
 }
+@media (min-width: 768px) {
+    .sidebar-nav {
+        display: none;
+    }
+}

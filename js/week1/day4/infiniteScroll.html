@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infinite Scroll Blog Feed</title>
+        <script src="infiniteScroll.js" defer></script>
+        <style>
+            body {
+                width: min(1440px, 90%);
+                margin-inline: 1em;
+            }
+            .hide {
+                display: none;
+            }
+            .line {
+                height: 10px;
+                width: 50%;
+                background-color: black;
+            }
+            .blog {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid black;
+                overflow-y: scroll;
+            }
+
+            .blog-container {
+                display: block;
+                position: relative;
+                width: 90%;
+
+                display: flex;
+                flex-direction: column;
+                padding-left: 1em;
+                min-height: 100vh;
+            }
+            .blog-card {
+                width: 80%;
+            }
+            .loader-container {
+                display: flex;
+                justify-content: center;
+            }
+            .loader {
+                width: 48px;
+                height: 48px;
+                border: 5px solid rgb(0, 0, 0);
+                border-bottom-color: transparent;
+                border-radius: 50%;
+                display: inline-block;
+                animation: rotation 1s linear infinite;
+            }
+            .retry-btn {
+                display: none;
+                margin-top: 10px;
+                margin-left: 10px;
+                border-radius: 8px;
+                height: 40px;
+                width: 150px;
+            }
+            @keyframes rotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="blog">
+            <h1 style="margin-left: 30px">Blog</h1>
+            <div class="blog-container"></div>
+            <div class="line"></div>
+        </section>
+        <div class="hide">
+            <div class="blog-card">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="loader-container">
+            <div class="loader"></div>
+            <p id="end"></p>
+            <button class="retry-btn">Retry</button>
+        </div>
+    </body>
+</html>

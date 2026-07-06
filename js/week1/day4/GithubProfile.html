@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Github Profile</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                color: white;
+            }
+            body {
+                background-color: #0d1117;
+                /* font-family: mon; */
+            }
+            header {
+                display: flex;
+                height: 64px;
+                color: white;
+                background-color: black;
+                align-items: center;
+                gap: 8px;
+            }
+            .icons {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-left: 16px;
+            }
+            .icons button {
+                background-color: transparent;
+                color: #9198a1;
+                height: 32px;
+                width: 32px;
+                border: 0.0625em solid #3d444d;
+            }
+            .avatar img {
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+            }
+            .follow-status {
+                display: flex;
+                gap: 8px;
+            }
+            .container {
+                display: flex;
+                margin-top: 30px;
+            }
+            .left-section {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-left: 16px;
+            }
+            .card-container {
+                margin-top: 30px;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                margin-left: 24px;
+            }
+            .stats {
+                display: flex;
+            }
+
+            .hidden {
+                display: none;
+            }
+            .repo-card {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 45%;
+                padding: 16px;
+                border: 0.5px solid #3d444d;
+                border-radius: 0.375rem;
+                min-height: 150px;
+            }
+            .repo-name {
+                color: #4493f8;
+                font-size: 20px;
+                font-weight: 600;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+            .description {
+                margin-top: 0.5rem;
+            }
+            .stats {
+                display: flex;
+                margin-top: 0.5rem;
+                justify-content: center;
+                text-align: center;
+            }
+            .language-badge {
+                margin-right: auto;
+            }
+            .star-count {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 9px;
+            }
+            #follow-btn {
+                text-align: center;
+                width: 100%;
+                color: #f0f6fc;
+                background-color: #212830;
+                border-color: #3d444d;
+                padding: 5px 1rem;
+                font-weight: 500;
+                font-size: 14px;
+                border-radius: 0.375rem;
+            }
+            #search {
+                border-radius: 0.375rem;
+                margin-left: 24px;
+                height: 20%;
+                color: black;
+                padding: 10px;
+            }
+        </style>
+        <script src="GithubProfile.js" defer></script>
+    </head>
+    <body>
+        <header id="top-header">
+            <div class="icons">
+                <button>
+                    <svg
+                        data-component="Octicon"
+                        aria-hidden="true"
+                        focusable="false"
+                        class="octicon octicon-three-bars"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        height="16"
+                        fill="#9198a1"
+                        display="inline-block"
+                        overflow="visible"
+                        style="vertical-align: text-bottom"
+                    >
+                        <path
+                            d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
+                        ></path>
+                    </svg>
+                </button>
+                <svg
+                    data-component="Octicon"
+                    aria-hidden="true"
+                    focusable="false"
+                    class="octicon octicon-mark-github"
+                    viewBox="0 0 24 24"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    display="inline-block"
+                    overflow="visible"
+                    style="vertical-align: text-bottom"
+                >
+                    <path
+                        d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"
+                    ></path>
+                </svg>
+            </div>
+            <h1 class="username">username</h1>
+            <input type="text" id="search" placeholder="search user" />
+        </header>
+        <div class="container">
+            <div class="left-section">
+                <div class="avatar">
+                    <img
+                        src="./image.png"
+                        alt="github avatar image"
+                        style="height: 256px; width: 256px"
+                    />
+                </div>
+                <div class="name-content">
+                    <h2 id="name">Name</h2>
+                    <h3 class="username">username</h3>
+                </div>
+                <button id="follow-btn">Follow</button>
+                <p id="bio">
+                    Bio Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore, officia!
+                </p>
+
+                <div class="follow-status">
+                    <div class="followers">
+                        <span id="follower-count">10</span>
+                        followers
+                    </div>
+                    <div class="following">
+                        <span id="following-count">12</span>
+                        following
+                    </div>
+                </div>
+                <div class="location">
+                    <svg
+                        data-component="Octicon"
+                        class="octicon octicon-location"
+                        viewBox="0 0 16 16"
+                        version="1.1"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                        fill="#9198a1"
+                    >
+                        <path
+                            d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"
+                        ></path>
+                    </svg>
+                    <span id="loc">Location</span>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="card-container"></div>
+            </div>
+        </div>
+        <div class="hidden">
+            <div class="repo-card">
+                <div class="repo-name"></div>
+                <div class="description"></div>
+                <div class="fill-div" style="flex-grow: 1"></div>
+                <div class="stats">
+                    <div class="language-badge"></div>
+                    <div class="star-count">
+                        <svg
+                            aria-label="stars"
+                            role="img"
+                            data-component="Octicon"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            version="1.1"
+                            width="16"
+                            data-view-component="true"
+                            class="octicon octicon-star"
+                            fill="#9198a1"
+                        >
+                            <path
+                                d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
+                            ></path>
+                        </svg>
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

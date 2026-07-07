@@ -54,26 +54,6 @@ function viewContent() {
     sessionStorage.setItem("main-contents", contentBtn.ariaExpanded);
 }
 
-function makeTabVisible(event) {
-    const currentButton = event.target;
-
-    if (currentButton.id === "tab-btn1") {
-        tabButton1.setAttribute("aria-expanded", true);
-        tabButton2.setAttribute("aria-expanded", false);
-
-        tab1.classList.add("tab-visible");
-        tab2.classList.remove("tab-visible");
-    } else {
-        tabButton1.setAttribute("aria-expanded", false);
-        tabButton2.setAttribute("aria-expanded", true);
-
-        tab2.classList.add("tab-visible");
-        tab1.classList.remove("tab-visible");
-    }
-    sessionStorage.setItem("tab-1", tabButton1.ariaExpanded);
-    sessionStorage.setItem("tab-2", tabButton2.ariaExpanded);
-}
-
 const focusBtns = document.querySelectorAll("button");
 let i = 0;
 

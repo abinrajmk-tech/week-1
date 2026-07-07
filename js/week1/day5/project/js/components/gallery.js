@@ -55,6 +55,9 @@ window.addEventListener("keydown", (event) => {
     }
 });
 
+rightButton.addEventListener("click", (event) => next(event));
+leftButton.addEventListener("click", (event) => prev(event));
+
 function next(e) {
     e.stopPropagation();
     index = (index + 1) % images.length;

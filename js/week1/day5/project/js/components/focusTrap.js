@@ -14,7 +14,6 @@ const getFocusable = () => {
 };
 
 const focusable = getFocusable();
-console.log(focusable);
 
 window.addEventListener("keydown", (event) => {
     let first = focusable[0];

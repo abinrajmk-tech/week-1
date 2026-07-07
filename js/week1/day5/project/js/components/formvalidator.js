@@ -1,12 +1,11 @@
-// ​Task 3 (70 min) - Wire All Form Validation​
-// ​432.​
-// ​FormValidator on contact form: name (required, min 2), email (required, valid), phone (optional,​
-// ​pattern), message (required, min 20)​
-// ​433.​ ​1.5 second loading state on submit, then success toast and form reset​
-// ​434.​
-// ​All error messages in a visible span below the field - not in a browser alert​
+//  Task 3 (70 min) - Wire All Form Validation
+//  432.
+//  FormValidator on contact form: name (required, min 2), email (required, valid), phone (optional,
+//  pattern), message (required, min 20)
+//  433.   1.5 second loading state on submit, then success toast and form reset
+//  434.
+//  All error messages in a visible span below the field - not in a browser alert
 import { showSuccessToast } from "../utils.js";
-const form = document.querySelector("form");
 export const rules = {
     name: { required: true, minLength: 3, maxLength: 10 },
     email: {
@@ -36,7 +35,6 @@ export default class FormValidator {
         }
         const ruleSet = this.rules[field.name];
         const span = field.nextElementSibling;
-        console.log(span);
         let isInvalid = false;
         for (const rule of Object.keys(ruleSet)) {
             switch (rule) {
@@ -71,8 +69,7 @@ export default class FormValidator {
                     }
                     break;
                 case "email":
-                    const pattern = rules["email"].pattern;
-                    if (!pattern.test(field.value)) {
+                    if (!rules["email"].pattern.test(field.value)) {
                         span.textContent = `input must be an email :`;
                         isInvalid = true;
                     }
@@ -113,8 +110,8 @@ export async function HandleSubmit(event) {
     submitBtn.disabled = true;
     submitBtn.textContent = "submitting..";
     try {
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+        // const formData = new FormData(form);
+        // const data = Object.fromEntries(formData.entries());
 
         await new Promise((resolve) => setTimeout(resolve, 1500));
         form.reset();
@@ -122,10 +119,9 @@ export async function HandleSubmit(event) {
         const valids = document.querySelectorAll(".is-valid + label ");
         valids.forEach((valid) => {
             valid.style.color = "#0009";
-            console.log(valid);
         });
     } catch (error) {
-        console.log(error);
+        console.error(error);
     } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = btntext;

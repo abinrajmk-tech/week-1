@@ -9,7 +9,6 @@ const callback = (entries) => {
     entries.forEach((entry) => {
         let element = entry.target;
         if (entry.isIntersecting) {
-            console.log(element);
             element.classList.add("visible");
         } else {
             element.classList.remove("visible");

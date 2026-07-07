@@ -20,8 +20,11 @@
             defer
             type="module"
         ></script>
+        <script src="js/main.js" type="module" defer></script>
     </head>
     <body>
+        <div id="toast-container"></div>
+
         <div class="scroller"></div>
         <div class="scrollup-btn">
             <button>scrollup</button>
@@ -161,11 +164,10 @@
                 </nav>
             </div>
             <div class="column-container">
-                <form action="/" method="get">
+                <form action="/" method="get" novalidate>
                     <fieldset>
                         <div class="floating-label">
                             <input type="text" id="name" name="name" required />
-
                             <label for="name">Name</label>
                         </div>
                         <div class="floating-label">
@@ -203,11 +205,16 @@
                             </datalist>
                         </div>
                         <div class="floating-label">
-                            <textarea
-                                name="messgae"
+                            <input
+                                name="message"
                                 id="message"
                                 maxlength="500"
-                            ></textarea>
+                                min="20"
+                                minlength="20"
+                                required
+                                type="text"
+                            />
+
                             <label for="message">Message</label>
                         </div>
                         <div>
@@ -222,7 +229,7 @@
                         </div>
                         <div>
                             <button
-                                class="blue-button"
+                                class="blue-button submit-button"
                                 title="title"
                                 type="submit"
                             >

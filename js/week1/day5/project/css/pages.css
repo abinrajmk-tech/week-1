@@ -725,7 +725,7 @@ figure {
 
 .floating-label label {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 1em;
     color: #0009;
     transform: translateY(-50%);
@@ -759,12 +759,12 @@ textarea {
 }
 
 .floating-label input:user-invalid + label {
-    top: -30%;
+    top: 11%;
     color: red;
 }
 
 .floating-label input:valid + label {
-    top: -30%;
+    top: 11%;
     color: green;
 }
 
@@ -809,4 +809,10 @@ iframe {
 
 #news-letter:checked ~ .custom-label::before {
     background-color: var(--color-button-text);
+}
+.is-valid {
+    color: green;
+}
+.is-invalid {
+    color: red;
 }

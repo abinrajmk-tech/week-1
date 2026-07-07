@@ -50,8 +50,12 @@
             defer
             type="module"
         ></script>
-        <script src="js/components/scrollanimation.js"></script>
-
+        <script
+            src="js/components/scrollanimation.js"
+            type="module"
+            defer
+        ></script>
+        <script src="js/pages/home.js" type="module" defer></script>
         <style>
             .visible {
                 animation: shake 2s linear infinite;
@@ -72,6 +76,12 @@
                 100% {
                     transform: rotate(0deg);
                 }
+            }
+            .recent-posts {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 0px;
             }
         </style>
         <title>Home Page</title>
@@ -314,6 +324,9 @@
                             </blockquote>
                         </div>
                     </div>
+                </div>
+                <div class="column recent-posts">
+                    <h3>Recent Posts</h3>
                 </div>
                 <div class="column">
                     <h3 class="targets">Feedbacks</h3>

@@ -12,7 +12,6 @@ if (form) {
         "blur",
         (event) => {
             formValidator.validate(event.target);
-            console.log(event.target.name);
         },
         true
     );

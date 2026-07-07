@@ -1,52 +1,51 @@
+import { fetchPosts } from "../utils.js";
 const searchbar = document.getElementById("searchbar");
-const searchArea = document.querySelector(".service-container");
-const article1 = document.querySelector(".article-1");
-const article2 = document.querySelector(".article-2");
-const article3 = document.querySelector(".article-3");
 const notFound = document.querySelector("#not-found");
-const modifyText = searchArea.innerHTML;
-const oldInnerHTML = searchArea.innerHTML;
-const url = new URL(location);
-console.log(url);
 
+const articles = document.querySelectorAll(".service-container article");
+function removeHighlights() {
+    articles.forEach((article) => {
+        const title = article.querySelector("h2");
+        const body = article.querySelector("p");
+        title.innerHTML = title.textContent;
+        body.innerHTML = body.textContent;
+    });
+}
 function processFilter(filter) {
+    if (!filter) {
+        articles.forEach((article) => {
+            article.classList.remove("hide");
+        });
+        notFound.classList.add("hide");
+        removeHighlights();
+        return;
+    }
+    let allHidden = true;
     const re = new RegExp(`${filter}`, "gi");
-    let newText = modifyText.replace(re, `<span>$&</span>`);
-    searchArea.innerHTML = newText;
-    let notFoundinArticle1 = false,
-        notFoundinArticle2 = false,
-        notFoundinArticle3 = false;
-    if (!article1.innerText.toLowerCase().includes(filter)) {
-        newText = newText.replace(
-            /class="article-1"/gi,
-            'class="article-1 hide"'
-        );
-        notFoundinArticle1 = true;
-    }
-    if (!article2.innerText.toLowerCase().includes(filter)) {
-        newText = newText.replace(
-            /class="article-2"/gi,
-            'class="article-2 hide"'
-        );
-        notFoundinArticle2 = true;
-    }
-    if (!article3.innerText.toLowerCase().includes(filter)) {
-        newText = newText.replace(
-            /class="article-3"/gi,
-            'class="article-3 hide"'
-        );
-        notFoundinArticle3 = true;
-    }
-    if (notFoundinArticle1 && notFoundinArticle2 && notFoundinArticle3) {
-        notFound.classList.remove("hide");
-    }
 
-    searchArea.innerHTML = newText;
+    articles.forEach((article) => {
+        const textContent = article.innerText.toLowerCase();
+        if (textContent.includes(filter)) {
+            article.classList.remove("hide");
+            allHidden = false;
+
+            const title = article.querySelector("h2");
+            const body = article.querySelector("p");
+            title.innerHTML = title.textContent.replace(re, `<span>$&</span>`);
+            body.innerHTML = body.textContent.replace(re, `<span>$&</span>`);
+        } else {
+            article.classList.add("hide");
+        }
+    });
+    if (allHidden) {
+        notFound.classList.remove("hide");
+    } else {
+        notFound.classList.add("hide");
+    }
 }
 
 window.addEventListener("popstate", (event) => {
     if (event.state === null) {
-        console.log("q");
         return;
     }
     searchbar.value = event.state.q;
@@ -56,13 +55,26 @@ window.addEventListener("popstate", (event) => {
 searchbar.addEventListener("keyup", () => {
     let filter = searchbar.value.trim().toLowerCase();
     if (filter === "") {
-        searchArea.innerHTML = oldInnerHTML;
-        notFound.classList.add("hide");
-        history.pushState({}, "", "");
-
+        history.pushState({}, "", window.location.pathname);
+        processFilter("");
         return;
     }
     history.pushState({ q: filter }, "", `?q=${filter}`);
-
     processFilter(filter);
 });
+
+async function setServices() {
+    const data = await fetchPosts();
+    const ServiceArticles = document.querySelectorAll(
+        ".service-container article"
+    );
+    ServiceArticles.forEach((service) => {
+        const title = service.querySelector("h2");
+        const body = service.querySelector("p");
+        const index = [...ServiceArticles].indexOf(service);
+
+        title.textContent = data[index].title;
+        body.textContent = data[index].body;
+    });
+}
+setServices();

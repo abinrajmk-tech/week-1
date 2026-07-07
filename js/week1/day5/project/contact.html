@@ -167,7 +167,13 @@
                 <form action="/" method="get" novalidate>
                     <fieldset>
                         <div class="floating-label">
-                            <input type="text" id="name" name="name" required />
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            />
                             <label for="name">Name</label>
                         </div>
                         <div class="floating-label">
@@ -176,6 +182,7 @@
                                 id="email"
                                 name="email"
                                 required
+                                autocomplete="email"
                             />
                             <label for="email">Email</label>
                         </div>
@@ -185,6 +192,7 @@
                                 id="phone"
                                 name="phone"
                                 required
+                                autocomplete="tel"
                             />
                             <label for="phone">phone</label>
                         </div>
@@ -213,6 +221,7 @@
                                 minlength="20"
                                 required
                                 type="text"
+                                autocomplete="off"
                             />
 
                             <label for="message">Message</label>
@@ -223,7 +232,7 @@
                                 name="news_letter"
                                 id="news-letter"
                             />
-                            <label for="news_letter" class="custom-label"
+                            <label for="news-letter" class="custom-label"
                                 >Get Notifications.</label
                             >
                         </div>

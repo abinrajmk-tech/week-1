@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mutation and Resize Observers</title>
+        <script src="MutationObserver.js" defer></script>
+        <style>
+            .red {
+                color: red;
+            }
+            #overlay {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 300px;
+                /* width: 300px; */
+                background-color: whitesmoke;
+                z-index: 9999;
+                margin-right: 10px;
+                border-radius: 16px;
+                padding: 10px;
+                box-shadow: 4px 4px rgb(133, 133, 133);
+            }
+            .container {
+                width: 70%;
+                margin-left: 1em;
+            }
+            .container .blog p {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="addbtn">Add Blog</button>
+        <div id="overlay">
+            <h1>Mutation Record</h1>
+            <p id="type"></p>
+            <p id="addedNode"></p>
+            <p id="attribute"></p>
+        </div>
+        <div class="container">
+            <div class="blog">
+                <h1>blog</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deleniti rerum eum doloribus cupiditate accusamus sit
+                    recusandae molestias similique reprehenderit, optio vero
+                    dolorem ratione, mollitia, excepturi ab quaerat? Ad,
+                    consequuntur rerum?
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

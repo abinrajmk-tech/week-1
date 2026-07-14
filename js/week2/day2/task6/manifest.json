@@ -1,0 +1,19 @@
+{
+    "name": "web App Manifest and PWA",
+    "short_name": "task 6",
+    "description": "this is the description for this manifest",
+    "start_url": "http://127.0.0.1:5500/js/week2/day2/task6/index.html",
+    "display": "standalone",
+    "theme_color": "#ffff",
+    "background_color": "#ffff",
+    "icons": [
+        {
+            "src": "./icons/high-res.png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "./icons/low-res.png",
+            "sizes": "188x188"
+        }
+    ]
+}

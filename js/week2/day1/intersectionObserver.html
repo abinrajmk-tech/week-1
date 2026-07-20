@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Intersection Observer = Advanced</title>
+        <style>
+            body {
+                width: 100%;
+            }
+            .container {
+                margin-inline: auto;
+                width: 70%;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            img {
+                display: block;
+                height: 600px;
+                width: 600px;
+            }
+            .images {
+                position: relative;
+                height: 700px;
+                width: 100%;
+            }
+            .sticky {
+                position: sticky;
+                top: 10px;
+                height: 40px;
+                padding: 0;
+            }
+            .sticky-sentinel {
+                position: absolute;
+                left: 0;
+                right: 0;
+                visibility: hidden;
+                /* background-color: red; */
+                /* height: 4px; */
+            }
+            .sticky-sentinel-top {
+                top: 10px;
+                height: 1px;
+            }
+            .sticky-sentinel-bottom {
+                bottom: 0px;
+                height: 1px;
+            }
+        </style>
+        <script src="intersectionObserver.js" defer></script>
+    </head>
+    <body>
+        <h1>Intersection Observer</h1>
+        <div class="container">
+            <div class="images">
+                <h1 class="sticky">Image 1</h1>
+                <img
+                    src=""
+                    data-src="https://picsum.photos/id/702/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <h1 class="sticky">Image 2</h1>
+                <img
+                    src=""
+                    data-src="https://picsum.photos/id/703/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <h1 class="sticky">Image 3</h1>
+                <img
+                    src=""
+                    data-src="https://picsum.photos/id/704/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <h1 class="sticky">Image 4</h1>
+                <img
+                    src=""
+                    data-src="https://picsum.photos/id/705/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <h1 class="sticky">Image 5</h1>
+                <img
+                    src=""
+                    data-src="https://picsum.photos/id/700/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="images">
+                <h1 class="sticky">Image 6</h1>
+                <img
+                    src=""
+                    data-src="https://picsum.photos/id/701/600/"
+                    alt="a random image from picsum"
+                />
+            </div>
+            <div class="animated-count">
+                <h1 id="count">0</h1>
+            </div>
+        </div>
+    </body>
+</html>

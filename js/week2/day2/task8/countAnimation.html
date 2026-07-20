@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>count Animation</title>
+        <script src="requestAnimationFrame.js" defer></script>
+        <style>
+            #count {
+                will-change: transform;
+            }
+            #bar-holder {
+                height: 8px;
+                border-radius: 12px;
+                border: 1px solid black;
+            }
+            #bar {
+                background-color: green;
+                height: 100%;
+                width: 0;
+                will-change: transform;
+                /* width: auto; */
+            }
+            #bar-text {
+                will-change: transform;
+            }
+            #status {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 4px;
+            }
+            .container {
+                display: flex;
+                position: relative;
+            }
+            .box {
+                width: 400px;
+                background-color: wheat;
+                margin: 10px;
+                height: 100px;
+            }
+
+            .box1 {
+                position: relative;
+                animation: box1 infinite 1s;
+                will-change: transform;
+            }
+            .box2 {
+                animation: box2 infinite 1s;
+                will-change: transform;
+            }
+            @keyframes box1 {
+                0% {
+                    top: 0;
+                }
+                100% {
+                    top: 100px;
+                }
+            }
+            @keyframes box2 {
+                0% {
+                    top: 0;
+                }
+                100% {
+                    transform: translateY(100px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="animated-count">
+            <h1>+<span id="count"></span>&MediumSpace;Users</h1>
+            <div id="bar-holder">
+                <div id="bar"></div>
+                <div id="status">
+                    <span id="uploading"></span><span id="bar-text"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+        </div>
+    </body>
+</html>

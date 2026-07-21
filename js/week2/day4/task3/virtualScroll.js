@@ -1,0 +1,56 @@
+class VirtualScroll {
+    constructor(container, items, itemHeight, bufferSize) {
+        this.container = container;
+        this.items = items;
+        this.itemHeight = itemHeight;
+        this.bufferSize = bufferSize;
+        this.containerHeight = 700;
+        this.visibleItems = Math.ceil(this.containerHeight / itemHeight);
+        this.totalHeight = items.length * itemHeight;
+        this.setupContainer();
+        this.render();
+        this.container.addEventListener("scroll", () => this.render());
+        this.ticking = false;
+    }
+    setupContainer() {
+        this.container.style.height = `${this.containerHeight}px`;
+        this.container.style.overflow = "auto";
+        this.container.style.position = "relative";
+        this.content = document.createElement("div");
+        this.content.style.height = `${this.totalHeight}px`;
+        this.container.appendChild(this.content);
+    }
+    handleScroll() {
+        if (!this.ticking) {
+            requestAnimationFrame(() => {
+                this.render();
+                this.ticking = false;
+            });
+            this.ticking = true;
+        }
+    }
+    render() {
+        const scrollTop = this.container.scrollTop;
+        const startIndex = Math.max(
+            0,
+            Math.floor(scrollTop / this.itemHeight) - this.bufferSize
+        );
+        const endIndex = Math.min(
+            this.items.length - 1,
+            startIndex + this.visibleItems + this.bufferSize * 2
+        );
+
+        this.content.innerHTML = "";
+        for (let i = startIndex; i <= endIndex && i < this.items.length; i++) {
+            const item = document.createElement("div");
+            item.style.position = "absolute";
+            item.style.top = `${i * this.itemHeight}px`;
+            item.style.height = `${this.itemHeight}px`;
+            item.textContent = this.items[i];
+            this.content.appendChild(item);
+        }
+    }
+}
+const container = document.getElementById("scroll-container");
+const items = Array.from({ length: 10000 }, (_, i) => `Item ${i + 1}`);
+new VirtualScroll(container, items, 50, 5);

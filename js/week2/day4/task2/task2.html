@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Count Animation</title>
+        <script src="task2.js" defer></script>
+        <style>
+            body {
+                background-color: whitesmoke;
+            }
+            #count {
+                will-change: transform;
+            }
+            #canvas {
+                margin: 30px;
+                width: 600px;
+                height: 800px;
+                border-radius: 64px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="animated-count">
+            <h1>+ <span id="count">&MediumSpace;Users</span></h1>
+        </div>
+        <canvas id="canvas"></canvas>
+    </body>
+</html>

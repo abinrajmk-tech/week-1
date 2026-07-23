@@ -1,10 +1,10 @@
-import { getStats, store } from "../js/store.js";
+import { getStats, store } from "../store.js";
 export default function stats() {
     const { tasks } = store.getState();
     const { total, completed, pending } = getStats(tasks);
     const stats = getStats(tasks);
 
-    return  ` <div class="stats-container">
+    return ` <div class="stats-container">
                     <div class="stats-cards">
                         ${Object.keys(stats)
                             .map((stat) => {

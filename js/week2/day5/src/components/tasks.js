@@ -1,4 +1,4 @@
-import { store, getStats } from "../js/store.js";
+import { store, getStats } from "../store.js";
 import completeButton from "./completeButton.js";
 import removeButton from "./removeButton.js";
 import prioritySvg from "./svg/prioritySvg.js";

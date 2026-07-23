@@ -1,11 +1,13 @@
 // router.js
 import { store } from "./js/store.js";
-import home from "./routes/home.js";
+import Home from "./routes/home.js";
 import Login from "./routes/login.js";
+import SignUp from "./routes/signUp.js";
 
 const routes = {
-    "/": home,
+    "/": Home,
     login: Login,
+    signup: SignUp,
     404: () => "<h1>404 Page Not Found </h1>",
 };
 

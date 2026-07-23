@@ -1,0 +1,15 @@
+{
+    "name": "task-manager",
+    "version": "1.0.0",
+    "description": "",
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "prettier-plugin-embed": "^0.5.1"
+    }
+}

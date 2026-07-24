@@ -39,12 +39,37 @@
     flex-direction: column;
     flex-grow: 1;
     gap: 2px;
+    opacity: 1;
+    transform: none;
 }
+#app:not(.skip-animations) .stats {
+    opacity: 0;
+    animation: stack 0.6s cubic-bezier(0.64, 0, 0.78, 0) forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes stack {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px) scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 .card {
     border-radius: 8px;
     padding: 12px 16px;
     border-top: 1px solid #0f0f141f;
+    box-shadow: 0 8px 24px #cfcfce;
     background-color: white;
+}
+.card:hover {
+    box-shadow: 0px 10px 24px ghostwhite;
+    transform: translateY(-5px);
 }
 
 .value {
@@ -102,6 +127,24 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc(33.33% - 8px);
+    opacity: 1;
+    transform: none;
+}
+#app:not(.skip-animations) .task {
+    opacity: 0;
+    animation: fade 0.6s cubic-bezier(0.64, 0, 0.78, 0) forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0 scale(1));
+    }
 }
 .sub-head {
     display: flex;
@@ -208,6 +251,9 @@ button.rm-btn:hover {
     font-weight: 500;
     background-color: #ebe6de;
 }
+.complete:hover {
+    border: 1px solid #c5c4c1;
+}
 .complete span {
     font-family: "DM Sans";
     font-size: 12px;
@@ -237,6 +283,9 @@ button.rm-btn:hover {
     background-color: #d0fae5;
     color: #009966;
 }
+.completed-task button.complete:hover {
+    border: 1px solid hsl(160, 100%, 40%);
+}
 .completed-task button.complete path {
     stroke: #009966;
 }
@@ -249,15 +298,40 @@ p {
     color: var(--p-color);
 }
 
+.single-task-view {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+.single-task-view .task {
+    flex-basis: 100% !important;
+}
+
 @media (max-width: 768px) {
     .task {
         flex-basis: calc(50% - 6px);
+    }
+
+    .task-modal {
+        width: 450px !important;
     }
 }
 
 @media (max-width: 500px) {
     .task {
         flex-basis: 100%;
+    }
+    .task-modal {
+        bottom: 0;
+        left: 0 !important;
+        right: 0 !important;
+        top: unset !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+    .input-section {
+        flex-direction: column;
     }
     .heading {
         padding: 32px 0 24px;

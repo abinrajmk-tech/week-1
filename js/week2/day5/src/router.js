@@ -1,96 +1,65 @@
 // router.js
-import { store } from "./js/store.js";
+import { store } from "./store.js";
 import Home from "./routes/home.js";
 import Login from "./routes/login.js";
+import signup from "./routes/signUp.js";
 import SignUp from "./routes/signUp.js";
+import clickEventListeners from "./listeners/click.js";
+import submitEventListeners from "./listeners/submit.js";
+import keyBoardEventListener from "./listeners/key.js";
 
-const routes = {
-    "/": Home,
-    login: Login,
-    signup: SignUp,
-    404: () => "<h1>404 Page Not Found </h1>",
-};
+import register from "./register.js";
+import { routes } from "./register.js";
+import { navigate } from "./navigate.js";
+import { getTask } from "./components/getTask.js";
+
+register("/", Home);
+register("/login", Login);
+register("/signup", signup);
+register("/tasks/:id", getTask);
 
 const app = document.getElementById("app");
 
+let previousPath = null;
 const render = (state) => {
-    const viewFunction = routes[state.route.path] || routes["404"];
-    app.innerHTML = viewFunction();
-};
+    const currentPath = state.route.path;
 
-window.addEventListener("click", (event) => {
-    const element = event.target.closest("[data-action");
-    if (!element) return;
-
-    const action = element.dataset.action;
-    const taskId = element.closest("[data-id]")?.dataset.id;
-    if (action === "delete-task") {
-        //remove task
-    }
-    if (action === "open-modal") {
-        const modal = document.querySelector(".task-modal");
-        modal.style.display = "flex";
-    }
-    if (action === "close-modal") {
-        const modal = document.querySelector(".task-modal");
-        modal.style.display = "none";
-    }
-    if (action === "complete") {
-        const state = store.getState();
-        let taskList = state.tasks;
-
-        const status =
-            taskList[taskId].status == "Pending" ? "Completed" : "Pending";
-
-        store.dispatch({
-            type: "UPDATE_TASK",
-            payload: {
-                id: taskId,
-                updates: {
-                    status: status,
-                },
-            },
-        });
-    }
-
-    if (action === "remove-task") {
-        store.dispatch({
-            type: "DELETE_TASK",
-            payload: {
-                id: taskId,
-            },
-        });
-    }
-    if (action === "submit-task") {
-        event.preventDefault();
-        const form = document.getElementById("task-form");
-        const data = new FormData(form);
-        const title = data.get("name");
-        const priority = data.get("priority");
-        const assignee = data.get("assignee");
-        const due = data.get("due-date");
-
-        store.dispatch({
-            type: "ADD_TASK",
-            payload: {
-                title: title,
-                assigned: assignee,
-                due: due,
-                status: "Pending",
-                priority: priority,
-            },
-        });
-    }
-});
-
-const syncRouterWithHash = () => {
-    const path = location.hash.slice(1) || "/";
-    store.dispatch({
-        type: "ROUTE_CHANGED",
-        payload: { path, params: {} },
+    let match = null;
+    let matchedRoute = routes.find((route) => {
+        if (!route.regex) return false;
+        match = currentPath.match(route.regex);
+        return match !== null;
     });
+    if (!matchedRoute) {
+        matchedRoute = routes.find((route) => route.path === "404");
+    }
+
+    const params = {};
+    if (match && matchedRoute.keys.length > 0) {
+        matchedRoute.keys.forEach((key, index) => {
+            params[key] = match[index + 1];
+        });
+    }
+    state.route.params = params;
+
+    if (previousPath === matchedRoute.path) {
+        app.classList.add("skip-animations");
+    } else {
+        app.classList.remove("skip-animations");
+        previousPath = matchedRoute.path;
+    }
+
+    app.innerHTML = matchedRoute.component(params);
 };
+function getPath() {
+    return window.location.pathname.toLowerCase();
+}
+
+clickEventListeners();
+submitEventListeners();
+keyBoardEventListener();
+
 store.subscribe(render);
 
-window.addEventListener("load", syncRouterWithHash);
-window.addEventListener("hashchange", syncRouterWithHash);
+window.addEventListener("load", () => navigate(getPath()));
+window.addEventListener("popstate", () => navigate(getPath()));

@@ -2,25 +2,26 @@ import { store, getStats } from "../store.js";
 import completeButton from "./completeButton.js";
 import removeButton from "./removeButton.js";
 import prioritySvg from "./svg/prioritySvg.js";
+
+const html = String.raw;
 export default function tasks() {
     const state = store.getState();
     const tasks = state.tasks;
-
     const { total, completed, pending } = getStats(state.tasks);
-
-    return `<div class="tasks-container">
-    <div class="sub-head">
-        <span class="sub-head-desc">Your Tasks</span>
-        <div id="task-count-span">${total} Tasks</div>
-    </div>
-    <div class="task-cards cards">
+    let i = 3;
+    return html`<div class="tasks-container">
+        <div class="sub-head">
+            <span class="sub-head-desc">Your Tasks</span>
+            <div id="task-count-span">${total} Tasks</div>
+        </div>
+        <div class="task-cards cards">
             ${Object.keys(tasks)
                 .map((task_id) => {
                     const task = tasks[task_id];
                     const completed =
                         task.status == "Completed" ? "completed-task" : "";
                     return `
-                            <div class="card task ${completed}" data-id='${tasks[task_id].id}'>
+                            <div class="card animate-card task ${completed}" data-id='${tasks[task_id].id}' style=" --i:${i++} ">
                                 <div class="task-head">
                                     <span class="task-title">${task.title}</span>
                                     <span class="task-priority ${task.priority.toLowerCase()}">
@@ -50,6 +51,6 @@ export default function tasks() {
                             `;
                 })
                 .join(" ")}
-                 </div>
-        </div>`;
+        </div>
+    </div>`;
 }

@@ -4,6 +4,7 @@ export const initialState = {
         path: "/",
         params: {},
     },
+
     tasks: [
         {
             id: 0,
@@ -82,7 +83,7 @@ export function reducer(state, action) {
 }
 
 export function createStore(initialState, reducer) {
-    let state = initialState;
+    let state = JSON.parse(localStorage.getItem("state")) || initialState;
     const listeners = [];
     return {
         getState() {
@@ -90,6 +91,7 @@ export function createStore(initialState, reducer) {
         },
         dispatch(action) {
             state = reducer(state, action);
+            localStorage.setItem("state", JSON.stringify(state));
             listeners.forEach((listener) => listener(state));
         },
         subscribe(listener) {

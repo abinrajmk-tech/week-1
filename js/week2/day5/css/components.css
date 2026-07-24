@@ -1,17 +1,27 @@
 /* task modal  */
-.task-modal {
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.task-modal-container {
     display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 9;
+    inset: 0;
+}
+.task-modal {
+    display: flex;
     flex-direction: column;
     width: 500px;
     background-color: white;
-    z-index: 9;
-    position: fixed;
+    position: absolute;
     border-radius: 12px;
     padding: 24px;
     gap: 16px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .modal-head {
     display: flex;

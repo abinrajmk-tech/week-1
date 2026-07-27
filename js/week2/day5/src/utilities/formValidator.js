@@ -5,7 +5,7 @@ export default class FormValidator {
         this.allValid = true;
     }
     validate(field) {
-        if (!this.rules[field.name]) {
+        if (field && !this.rules[field.name]) {
             return;
         }
         const fieldRules = this.rules[field.name];
@@ -33,7 +33,9 @@ export default class FormValidator {
         }
     }
     validateAll() {
-        Object.keys(this.rules).map((key) => this.validate(this.form[key]));
+        Object.keys(this.rules).map((key) =>
+            this.validate(this.form.elements.namedItem(key))
+        );
         return this.allValid;
     }
 }

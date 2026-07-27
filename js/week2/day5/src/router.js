@@ -46,12 +46,12 @@ const render = (state) => {
         app.classList.add("skip-animations");
     } else {
         app.classList.remove("skip-animations");
-        previousPath = matchedRoute.path;
     }
+    previousPath = matchedRoute.path;
 
     app.innerHTML = matchedRoute.component(params);
 };
-function getPath() {
+export function getPath() {
     return window.location.pathname.toLowerCase();
 }
 

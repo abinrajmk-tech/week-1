@@ -7,9 +7,7 @@ export default function clickEventListeners() {
 
         const action = element.dataset.action;
         const taskId = element.closest("[data-id]")?.dataset.id;
-        if (action === "delete-task") {
-            //remove task
-        }
+
         if (action === "open-modal") {
             const modal = document.querySelector(".task-modal-container");
             modal.style.display = "flex";
